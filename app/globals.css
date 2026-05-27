@@ -1,26 +1,142 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-cream: #FAF7F2;
+  --color-beige: #EDE5D8;
+  --color-beige-mid: #D4C5B0;
+  --color-coffee-light: #B89880;
+  --color-coffee: #8B6F5E;
+  --color-coffee-dark: #4A3728;
+  --color-text-main: #2C1F17;
+  --color-text-soft: #6B5448;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Jost", system-ui, sans-serif;
+
+  --shadow-card: 0 2px 24px rgba(74, 55, 40, 0.10);
+  --shadow-card-lg: 0 14px 40px rgba(74, 55, 40, 0.16);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.85;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Blog yazı içeriği */
+.post-content p {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.post-content p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  color: var(--color-coffee-dark);
+  font-weight: 500;
+  /* Safari: native drop cap */
+  -webkit-initial-letter: 3 2;
+  initial-letter: 3 2;
+  /* Diğer tarayıcılar için float fallback */
+  font-size: 3.4rem;
+  line-height: 1;
+  float: left;
+  margin: 0.1rem 0.55rem 0 0;
+}
+@supports (-webkit-initial-letter: 3) or (initial-letter: 3) {
+  .post-content p:first-of-type::first-letter {
+    font-size: inherit;
+    line-height: inherit;
+    float: none;
+    margin: 0 0.5rem 0 0;
+  }
+}
+.post-content h2 {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  color: var(--color-coffee-dark);
+  margin: 2.6rem 0 1rem;
+  position: relative;
+  padding-left: 1.1rem;
+}
+.post-content h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 0.55rem;
+  height: 1px;
+  background: var(--color-coffee-light);
+}
+.post-content h3 { font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-coffee); margin: 1.8rem 0 0.7rem; }
+.post-content ul, .post-content ol { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+.post-content li { margin-bottom: 0.4rem; }
+.post-content a { color: var(--color-coffee); text-decoration: underline; text-underline-offset: 3px; }
+.post-content blockquote {
+  border-left: 2px solid var(--color-coffee-light);
+  padding: 0.3rem 0 0.3rem 1.6rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-text-soft);
+  margin: 2.2rem 0;
+}
+.post-content strong { color: var(--color-coffee-dark); font-weight: 500; }
+
+.reveal-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* TipTap admin editörü */
+.tiptap-editor .tiptap {
+  outline: none;
+  min-height: 280px;
+}
+.tiptap-editor .tiptap p { margin-bottom: 1rem; }
+.tiptap-editor .tiptap h2 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--color-coffee-dark);
+  margin: 1.8rem 0 0.75rem;
+}
+.tiptap-editor .tiptap h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-coffee);
+  margin: 1.4rem 0 0.5rem;
+}
+.tiptap-editor .tiptap strong { font-weight: 600; color: var(--color-coffee-dark); }
+.tiptap-editor .tiptap em { font-style: italic; }
+.tiptap-editor .tiptap ul, .tiptap-editor .tiptap ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+.tiptap-editor .tiptap li { margin-bottom: 0.3rem; }
+.tiptap-editor .tiptap ul li { list-style: disc; }
+.tiptap-editor .tiptap ol li { list-style: decimal; }
+.tiptap-editor .tiptap blockquote {
+  border-left: 2px solid var(--color-coffee-light);
+  padding-left: 1.2rem;
+  font-style: italic;
+  color: var(--color-text-soft);
+  margin: 1.5rem 0;
+}
+.tiptap-editor .tiptap p.is-editor-empty::before {
+  content: attr(data-placeholder);
+  color: var(--color-beige-mid);
+  pointer-events: none;
+  float: left;
+  height: 0;
 }
