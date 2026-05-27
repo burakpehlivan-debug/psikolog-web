@@ -1,7 +1,6 @@
-import { Resend } from 'resend'
-
-function getResend() {
+async function getResend() {
   if (!process.env.RESEND_API_KEY) return null
+  const { Resend } = await import('resend')
   return new Resend(process.env.RESEND_API_KEY)
 }
 
@@ -118,7 +117,7 @@ export async function sendNewAppointmentEmail(data: AppointmentEmailData) {
 </body>
 </html>`
 
-  const resend = getResend()
+  const resend = await getResend()
   if (!resend) return
 
   await resend.emails.send({
