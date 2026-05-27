@@ -1,6 +1,9 @@
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+function getResend() {
+  if (!process.env.RESEND_API_KEY) return null
+  return new Resend(process.env.RESEND_API_KEY)
+}
 
 function formatDT(iso: string) {
   const d = new Date(iso)
@@ -114,6 +117,9 @@ export async function sendNewAppointmentEmail(data: AppointmentEmailData) {
   </table>
 </body>
 </html>`
+
+  const resend = getResend()
+  if (!resend) return
 
   await resend.emails.send({
     from: `${process.env.SITE_OWNER_NAME ?? 'Site'} <onboarding@resend.dev>`,
