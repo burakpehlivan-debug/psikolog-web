@@ -121,7 +121,7 @@ export async function sendNewAppointmentEmail(data: AppointmentEmailData) {
   if (!resend) return
 
   await resend.emails.send({
-    from: `${process.env.SITE_OWNER_NAME ?? 'Site'} <onboarding@resend.dev>`,
+    from: `${process.env.SITE_OWNER_NAME ?? 'Site'} <noreply@handepehlivan.org>`,
     to,
     subject: `Yeni Randevu Talebi — ${data.name}`,
     html,
