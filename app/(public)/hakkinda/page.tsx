@@ -56,11 +56,12 @@ const infoCards = [
 ]
 
 const certifications = [
-  '2. Düzey Deneyimsel Oyun Terapisi (DOT) — Madalyon Psikiyatri Merkezi, 2020–2024',
+  '2. Düzey Deneyimsel Oyun Terapisi (DOT) — Byron Norton, 2020–2024',
+  '1. Düzey Deneyimsel Oyun Terapisi (DOT) — Nilüfer Devecigil',
   'WISC-IV Uygulayıcısı — Türk Psikologlar Derneği, 2020',
   'Çocuk Objektif Testler Uygulamacısı — Mind Engineers Psikoloji, 2020',
   'Mindfulness Uzman Eğitimi — Doç. Dr. Bilge Uzun / Bahçeşehir Üniversitesi, 2020',
-  'Rorschach Testi & TAT (Tematik Algı Testi) Eğitimi — Madalyon Psikiyatri Merkezi',
+  'Rorschach Testi & TAT (Tematik Algı Testi) Eğitimi — Dr. Bengi Pirim Düşgör / İstanbul Üniversitesi',
   'Yeme Bozukluklarında Bilişsel Davranışçı Terapi — Prof. Dr. Levent Sütçigil, 2019',
   'Çocuklarda Yeme Bozuklukları ve Aile Tabanlı Terapi — Uzm. Dr. Hakan Öğütlü, 2019',
   'Kabul ve Kararlılık Terapisi — Vaka Değerlendirme, 2019',
