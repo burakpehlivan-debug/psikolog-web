@@ -7,7 +7,7 @@ export default function CtaBand() {
       <RevealOnScroll direction="scale">
       <h2 className="text-[2.2rem] text-cream mb-4">Bir adım atmak yeter.</h2>
       <p className="text-[0.92rem] text-cream/70 max-w-[460px] mx-auto mb-10">
-        Çocuğunuz için profesyonel destek almak istiyorsanız benimle iletişime geçmekten çekinmeyin.
+        Kendiniz için profesyonel destek almak istiyorsanız benimle iletişime geçmekten çekinmeyin.
       </p>
       <Link
         href="/iletisim"

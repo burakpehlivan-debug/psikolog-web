@@ -59,7 +59,7 @@ export default function Navbar() {
                 href="/randevu"
                 className="font-sans text-[0.8rem] tracking-[0.12em] uppercase no-underline bg-coffee-dark text-cream px-5 py-2 hover:bg-coffee transition-colors duration-300"
               >
-                Randevu Al
+                Randevu Talep Et
               </Link>
             </li>
           </ul>

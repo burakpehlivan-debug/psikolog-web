@@ -53,10 +53,10 @@ export default async function RandevuPage() {
             <span className="block w-8 h-px bg-coffee-light/60" />
           </p>
           <h1 className="text-[clamp(2.6rem,5vw,3.8rem)] text-cream mb-6 leading-[1.1]">
-            Randevu <em className="italic text-coffee-light font-normal">Al</em>
+            Randevu Talep <em className="italic text-coffee-light font-normal">Et</em>
           </h1>
           <p className="text-[0.95rem] text-cream/70 max-w-md mx-auto leading-[1.95]">
-            Takvimden uygun bir gün ve saati seçin, bilgilerinizi girin. Kısa sürede size dönüş yapılacaktır.
+            Takvimden uygun bir gün ve saati seçin, bilgilerinizi girin. En kısa sürede size dönüş yapılacaktır.
           </p>
         </div>
       </section>

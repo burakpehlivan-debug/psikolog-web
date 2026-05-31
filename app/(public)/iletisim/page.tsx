@@ -23,7 +23,7 @@ export default async function IletisimPage() {
           <em className="italic text-coffee">nasıl yardımcı olabilirim?</em>
         </h1>
         <p className="text-[0.88rem] text-text-soft leading-[1.95] mb-8">
-          Çocuğunuz veya ergeniniz için profesyonel destek almak istiyorsanız ya da merak ettiğiniz konular varsa formu doldurabilir veya doğrudan mail atabilirsiniz.
+          Terapi süreci veya randevu talebi hakkında merak ettiğiniz konular varsa formu doldurabilir, doğrudan mail atabilir ya da WhatsApp üzerinden ulaşabilirsiniz.
         </p>
 
         <div className="flex flex-col gap-5">

@@ -2,33 +2,36 @@ import RevealOnScroll from '@/components/ui/RevealOnScroll'
 
 const cards = [
   {
-    title: 'Çocuklar (4–12 Yaş)',
-    desc: 'Oyun terapisi ve yaratıcı yöntemlerle çocukların duygusal gelişimini destekliyorum; davranışsal güçlüklere birlikte çözüm üretiyoruz.',
+    title: 'Anksiyete & Sınav Kaygısı',
+    desc: 'Sınav korkusu, sosyal kaygı, panik atak ve yaygın anksiyete bozukluğu gibi konularda BDT temelli yaklaşımlarla çalışıyorum.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="52" height="52">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+        <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+        <line x1="6" y1="1" x2="6" y2="4" />
+        <line x1="10" y1="1" x2="10" y2="4" />
+        <line x1="14" y1="1" x2="14" y2="4" />
       </svg>
     ),
   },
   {
-    title: 'Ergenler (13–18 Yaş)',
-    desc: 'Kimlik gelişimi, akran ilişkileri, anksiyete ve depresyon gibi ergenliğe özgü zorluklarda rehberlik ediyorum.',
+    title: 'Depresyon & Ruh Hali',
+    desc: 'Motivasyon kaybı, umutsuzluk, OKB ve sosyal fobi gibi duygusal zorluklarda yanınızda olarak iyileşme sürecini birlikte yürütüyoruz.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="52" height="52">
-        <circle cx="12" cy="8" r="5" />
-        <path d="M20 21a8 8 0 1 0-16 0" />
+        <circle cx="12" cy="12" r="10" />
+        <path d="M8 15s1.5-2 4-2 4 2 4 2" />
+        <line x1="9" y1="9" x2="9.01" y2="9" />
+        <line x1="15" y1="9" x2="15.01" y2="9" />
       </svg>
     ),
   },
   {
-    title: 'Ebeveyn Danışmanlığı',
-    desc: 'Anne ve babaları çocuklarıyla kurdukları ilişkiyi güçlendirmeleri ve sağlıklı bir aile ortamı oluşturmaları için destekliyorum.',
+    title: 'Yeme Bozuklukları & Travma',
+    desc: 'Beden imgesi sorunları, yeme bozuklukları ve travma sonrası stres bozukluğu alanlarında uzmanlaşmış destek sunuyorum.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="52" height="52">
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-        <polyline points="9 22 9 12 15 12 15 22" />
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
       </svg>
     ),
   },
@@ -41,7 +44,7 @@ export default function ExpertiseSection() {
         <RevealOnScroll>
           <div className="text-center mb-16">
             <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-4">Uzmanlık Alanlarım</span>
-            <h2 className="text-[clamp(1.8rem,3.2vw,2.8rem)] text-coffee-dark">Kimlerle Çalışıyorum?</h2>
+            <h2 className="text-[clamp(1.8rem,3.2vw,2.8rem)] text-coffee-dark">Ne Konularda Çalışıyorum?</h2>
             <div className="w-11 h-px bg-coffee-light mx-auto mt-6" />
           </div>
         </RevealOnScroll>

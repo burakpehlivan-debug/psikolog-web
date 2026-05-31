@@ -1,10 +1,11 @@
 import RevealOnScroll from '@/components/ui/RevealOnScroll'
 
 const credentials = [
-  'Klinik Psikoloji Yüksek Lisans',
+  'Uzman Klinik Psikolog',
+  'Klinik Psikoloji Yüksek Lisans — Hasan Kalyoncu Üniversitesi',
   'Bilişsel Davranışçı Terapi Uzmanlık Eğitimi',
-  'Deneyimsel Oyun Terapisi Sertifikası',
-  'Çocuk & Ergen Uzmanlık Alanı',
+  'WISC-IV Uygulayıcısı — Türk Psikologlar Derneği',
+  'Türk Psikologlar Derneği Üyesi',
 ]
 
 export default function AboutSection() {
@@ -29,7 +30,7 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="absolute bottom-[-2.5rem] left-[-2rem] bg-coffee-dark text-cream px-7 py-6 max-w-[210px] z-10 font-display italic text-[1rem] leading-[1.65]">
-            &ldquo;Her çocuk, doğru ortamda büyüyüp gelişebilir.&rdquo;
+            &ldquo;Anlamlı değişim, doğru ortamda mümkündür.&rdquo;
           </div>
         </div>
         </RevealOnScroll>
@@ -40,10 +41,10 @@ export default function AboutSection() {
           <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-4">Terapistini Tanı</span>
           <h2 className="text-[2.1rem] text-coffee-dark mb-6">Hande Pehlivan</h2>
           <p className="text-text-soft text-[0.92rem] mb-5">
-            Merhaba, ben Hande. Çocuk ve ergen psikolojisi alanında uzmanlaşmış bir klinik psikologum. Bireylerin kendilerini güvende ve değerli hissedebilecekleri bir terapi ortamı yaratmayı önceliğim olarak görüyorum.
+            Merhaba, ben Hande. Uzman Klinik Psikolog olarak anksiyete, depresyon, sınav kaygısı, yeme bozuklukları ve travma gibi alanlarda bireylerle çalışıyorum. Danışanlarımın kendilerini güvende ve anlaşılmış hissedebilecekleri bir terapi ortamı yaratmak önceliğim.
           </p>
           <p className="text-text-soft text-[0.92rem] mb-8">
-            Bilişsel Davranışçı Terapi (BDT) ve deneyimsel oyun terapisi yaklaşımlarını bütüncül bir çerçevede kullanarak çalışıyor; her çocuğun benzersiz ihtiyaçlarına uyarlanmış bir yol izliyorum.
+            Bilişsel Davranışçı Terapi (BDT) temel yaklaşımım olmakla birlikte, her bireyin ihtiyacına göre esneklikle çalışıyorum. Seanslarım online yürütülmektedir.
           </p>
           <div className="flex flex-col gap-3">
             {credentials.map(c => (
