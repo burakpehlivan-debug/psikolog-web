@@ -40,10 +40,10 @@ export default function AboutSection() {
           <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-4">Terapistini Tanı</span>
           <h2 className="text-[2.1rem] text-coffee-dark mb-6">Hande Pehlivan</h2>
           <p className="text-text-soft text-[0.92rem] mb-5">
-            Klinik Psikolog olarak anksiyete, depresyon, sınav kaygısı, yeme bozuklukları ve travma gibi alanlarda yetişkinler, çocuklar ve ergenlerle çalışıyorum. Danışanlarımın kendilerini güvende ve anlaşılmış hissedebilecekleri bir terapi ortamı yaratmak önceliğim.
+            Klinik Psikolog olarak DEHB, anksiyete, depresyon, sınav kaygısı, yeme bozuklukları ve travma alanlarında geç yetişkinler, çocuklar ve ergenlerle çalışıyorum. Danışanlarımın kendilerini güvende ve anlaşılmış hissedebilecekleri bir terapi ortamı yaratmak önceliğim.
           </p>
           <p className="text-text-soft text-[0.92rem] mb-8">
-            Bilişsel Davranışçı Terapi (BDT) temel yaklaşımım olmakla birlikte, her bireyin ihtiyacına göre esneklikle çalışıyorum.
+            Geç yetişkin ve ergenlerle Bilişsel Davranışçı Terapi (BDT), çocuklarla ise Deneyimsel Oyun Terapisi (DOT) çerçevesinde çalışıyorum.
           </p>
           <div className="flex flex-col gap-3">
             {credentials.map(c => (

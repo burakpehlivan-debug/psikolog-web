@@ -2,20 +2,33 @@ import RevealOnScroll from '@/components/ui/RevealOnScroll'
 
 const cards = [
   {
-    title: 'Anksiyete, Depresyon & Travma',
-    desc: 'Sınav kaygısı, sosyal fobi, panik atak, depresyon, OKB, yeme bozuklukları ve travma gibi alanlarda BDT temelli çalışıyorum.',
+    title: 'DEHB',
+    subtitle: 'Dikkat Eksikliği & Hiperaktivite Bozukluğu',
+    desc: 'Çocuk, ergen ve geç yetişkinlerde DEHB değerlendirmesi ve terapötik müdahale. Uzmanlık tezimin konusu olan bu alan, çalışmalarımın odak noktalarından biridir.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="52" height="52">
         <circle cx="12" cy="12" r="10" />
-        <path d="M8 15s1.5-2 4-2 4 2 4 2" />
-        <line x1="9" y1="9" x2="9.01" y2="9" />
-        <line x1="15" y1="9" x2="15.01" y2="9" />
+        <line x1="12" y1="8" x2="12" y2="12" />
+        <line x1="12" y1="16" x2="12.01" y2="16" />
       </svg>
     ),
+    featured: true,
+  },
+  {
+    title: 'Anksiyete, Depresyon & Travma',
+    subtitle: null,
+    desc: 'Sınav kaygısı, sosyal fobi, panik bozukluk, OKB, yeme bozuklukları, depresyon ve travma alanlarında BDT temelli bireysel terapi.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="52" height="52">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      </svg>
+    ),
+    featured: false,
   },
   {
     title: 'Çocuk & Ergen Psikolojisi',
-    desc: 'Dikkat güçlükleri, davranış sorunları, kimlik gelişimi, akran ilişkileri ve ergenliğe özgü zorluklarda çocuk ve gençlerle çalışıyorum.',
+    subtitle: null,
+    desc: 'Davranış sorunları, duygusal gelişim güçlükleri, kimlik gelişimi, akran ilişkileri ve ergenliğe özgü zorluklarda çocuk ve gençlerle çalışıyorum.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="52" height="52">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -23,15 +36,18 @@ const cards = [
         <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
+    featured: false,
   },
   {
-    title: 'Oyun Terapisi',
-    desc: 'Çocukların duygularını keşfetmeleri ve ifade etmeleri için oyun terapisi yöntemlerini yüz yüze seanslarla uyguluyorum.',
+    title: 'Deneyimsel Oyun Terapisi',
+    subtitle: null,
+    desc: 'Çocukların iç dünyalarını oyun aracılığıyla keşfetmelerine ve ifade etmelerine olanak tanıyan bütünleşik bir ekol. Yüz yüze seanslarla uygulanır.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="52" height="52">
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
       </svg>
     ),
+    featured: false,
   },
 ]
 
@@ -47,13 +63,14 @@ export default function ExpertiseSection() {
           </div>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
-          {cards.map(({ title, desc, icon }, i) => (
-            <RevealOnScroll key={title} direction="up" delay={i * 120}>
-              <div className="bg-white px-8 py-10 text-center border-b-2 border-transparent hover:border-coffee hover:-translate-y-1 transition-all duration-300">
-                <div className="text-coffee w-[52px] h-[52px] mx-auto mb-6">{icon}</div>
-                <h3 className="text-[1.05rem] text-coffee-dark mb-3">{title}</h3>
-                <p className="text-[0.83rem] text-text-soft leading-[1.85]">{desc}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+          {cards.map(({ title, subtitle, desc, icon, featured }, i) => (
+            <RevealOnScroll key={title} direction="up" delay={i * 100}>
+              <div className={`px-8 py-10 border-b-2 border-transparent hover:border-coffee hover:-translate-y-1 transition-all duration-300 ${featured ? 'bg-coffee-dark text-cream' : 'bg-white'}`}>
+                <div className={`w-[52px] h-[52px] mb-6 ${featured ? 'text-coffee-light' : 'text-coffee'}`}>{icon}</div>
+                <h3 className={`text-[1.05rem] mb-1 ${featured ? 'text-cream' : 'text-coffee-dark'}`}>{title}</h3>
+                {subtitle && <p className={`text-[0.72rem] tracking-[0.1em] uppercase mb-3 ${featured ? 'text-coffee-light' : 'text-coffee'}`}>{subtitle}</p>}
+                <p className={`text-[0.83rem] leading-[1.85] mt-3 ${featured ? 'text-cream/75' : 'text-text-soft'}`}>{desc}</p>
               </div>
             </RevealOnScroll>
           ))}

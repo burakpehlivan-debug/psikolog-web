@@ -3,12 +3,12 @@ import type { Settings } from '@/lib/types'
 
 const pages = [
   { href: '/', label: 'Ana Sayfa' },
+  { href: '/hakkinda', label: 'Hakkında' },
   { href: '/blog', label: 'Blog' },
-  { href: '/randevu', label: 'Randevu' },
   { href: '/iletisim', label: 'İletişim' },
 ]
 
-const expertise = ['Çocuk Terapisi', 'Ergen Terapisi', 'Ebeveyn Danışmanlığı', 'Oyun Terapisi']
+const expertise = ['DEHB', 'Sınav Kaygısı', 'Yeme Bozuklukları', 'Deneyimsel Oyun Terapisi']
 
 export default function Footer({ settings }: { settings: Settings | null }) {
   return (
@@ -18,7 +18,7 @@ export default function Footer({ settings }: { settings: Settings | null }) {
           <span className="block font-serif text-[1.15rem] text-cream mb-0.5">Hande Pehlivan</span>
           <span className="block text-[0.7rem] text-cream/50 tracking-[0.15em] uppercase">Klinik Psikolog</span>
           <p className="text-[0.82rem] text-cream/45 leading-[1.8] mt-5">
-            Çocuk ve ergen psikolojisi alanında uzmanlaşmış, bilimsel temelli terapi hizmetleri.
+            DEHB, anksiyete, depresyon ve Deneyimsel Oyun Terapisi alanlarında bireysel terapi.
           </p>
           {(settings?.instagram_url || settings?.linkedin_url) && (
             <div className="flex gap-3 mt-4">
