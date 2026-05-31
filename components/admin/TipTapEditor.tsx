@@ -1,6 +1,8 @@
 'use client'
 import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
+import Link from '@tiptap/extension-link'
+import Underline from '@tiptap/extension-underline'
 
 interface Props {
   content: string
@@ -37,9 +39,20 @@ function ToolbarButton({ onClick, active, children, title }: ToolbarButtonProps)
   )
 }
 
+function Divider() {
+  return <span className="w-px h-6 self-center mx-1" style={{ background: 'var(--color-beige)' }} />
+}
+
 export default function TipTapEditor({ content, onChange }: Props) {
   const editor = useEditor({
-    extensions: [StarterKit],
+    extensions: [
+      StarterKit,
+      Underline,
+      Link.configure({
+        openOnClick: false,
+        autolink: true,
+      }),
+    ],
     content,
     immediatelyRender: false,
     onUpdate({ editor }) {
@@ -49,6 +62,17 @@ export default function TipTapEditor({ content, onChange }: Props) {
 
   if (!editor) return null
 
+  function handleSetLink() {
+    const prev = editor!.getAttributes('link').href ?? ''
+    const url = window.prompt('Link URL girin (boş bırakın kaldırmak için):', prev)
+    if (url === null) return
+    if (url.trim() === '') {
+      editor!.chain().focus().unsetLink().run()
+    } else {
+      editor!.chain().focus().setLink({ href: url.trim() }).run()
+    }
+  }
+
   return (
     <div className="border border-beige rounded-xl overflow-hidden bg-white">
       {/* Toolbar */}
@@ -56,19 +80,27 @@ export default function TipTapEditor({ content, onChange }: Props) {
         className="flex flex-wrap gap-0.5 px-3 py-2 border-b border-beige"
         style={{ background: 'var(--color-cream)' }}
       >
+        {/* Metin biçimi */}
         <ToolbarButton
-          title="Kalın"
+          title="Kalın (Ctrl+B)"
           active={editor.isActive('bold')}
           onClick={() => editor.chain().focus().toggleBold().run()}
         >
           <strong>B</strong>
         </ToolbarButton>
         <ToolbarButton
-          title="İtalik"
+          title="İtalik (Ctrl+I)"
           active={editor.isActive('italic')}
           onClick={() => editor.chain().focus().toggleItalic().run()}
         >
           <em>İ</em>
+        </ToolbarButton>
+        <ToolbarButton
+          title="Altı çizili (Ctrl+U)"
+          active={editor.isActive('underline')}
+          onClick={() => editor.chain().focus().toggleUnderline().run()}
+        >
+          <u>U</u>
         </ToolbarButton>
         <ToolbarButton
           title="Üstü çizili"
@@ -78,8 +110,9 @@ export default function TipTapEditor({ content, onChange }: Props) {
           <s>S</s>
         </ToolbarButton>
 
-        <span className="w-px h-6 self-center mx-1" style={{ background: 'var(--color-beige)' }} />
+        <Divider />
 
+        {/* Başlıklar */}
         <ToolbarButton
           title="Başlık 2"
           active={editor.isActive('heading', { level: 2 })}
@@ -95,8 +128,9 @@ export default function TipTapEditor({ content, onChange }: Props) {
           H3
         </ToolbarButton>
 
-        <span className="w-px h-6 self-center mx-1" style={{ background: 'var(--color-beige)' }} />
+        <Divider />
 
+        {/* Listeler & alıntı */}
         <ToolbarButton
           title="Madde listesi"
           active={editor.isActive('bulletList')}
@@ -119,8 +153,20 @@ export default function TipTapEditor({ content, onChange }: Props) {
           ❝
         </ToolbarButton>
 
-        <span className="w-px h-6 self-center mx-1" style={{ background: 'var(--color-beige)' }} />
+        <Divider />
 
+        {/* Link */}
+        <ToolbarButton
+          title="Link ekle / kaldır"
+          active={editor.isActive('link')}
+          onClick={handleSetLink}
+        >
+          🔗
+        </ToolbarButton>
+
+        <Divider />
+
+        {/* Geri / ileri */}
         <ToolbarButton
           title="Geri al"
           onClick={() => editor.chain().focus().undo().run()}

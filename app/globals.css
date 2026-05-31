@@ -42,7 +42,7 @@ h1, h2, h3, h4 {
   margin-bottom: 1.5rem;
   text-align: left;
 }
-.post-content p:first-of-type::first-letter {
+.post-content > p:first-of-type::first-letter {
   font-family: var(--font-display);
   color: var(--color-coffee-dark);
   font-weight: 500;
@@ -56,7 +56,7 @@ h1, h2, h3, h4 {
   margin: 0.1rem 0.55rem 0 0;
 }
 @supports (-webkit-initial-letter: 3) or (initial-letter: 3) {
-  .post-content p:first-of-type::first-letter {
+  .post-content > p:first-of-type::first-letter {
     font-size: inherit;
     line-height: inherit;
     float: none;
@@ -83,6 +83,7 @@ h1, h2, h3, h4 {
 .post-content h3 { font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-coffee); margin: 1.8rem 0 0.7rem; }
 .post-content ul, .post-content ol { padding-left: 1.5rem; margin-bottom: 1.5rem; }
 .post-content li { margin-bottom: 0.4rem; }
+.post-content li p { margin-bottom: 0; }
 .post-content a { color: var(--color-coffee); text-decoration: underline; text-underline-offset: 3px; }
 .post-content blockquote {
   border-left: 2px solid var(--color-coffee-light);
@@ -100,38 +101,56 @@ h1, h2, h3, h4 {
   transform: none !important;
 }
 
-/* TipTap admin editörü */
+/* TipTap admin editörü — yayın sayfasıyla birebir eşleşen WYSIWYG stiller */
 .tiptap-editor .tiptap {
   outline: none;
-  min-height: 280px;
+  min-height: 320px;
+  font-size: 0.96rem;
+  line-height: 2.05;
 }
-.tiptap-editor .tiptap p { margin-bottom: 1rem; }
+.tiptap-editor .tiptap p { margin-bottom: 1.5rem; }
+.tiptap-editor .tiptap li p { margin-bottom: 0; }
 .tiptap-editor .tiptap h2 {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 500;
+  font-size: 1.55rem;
+  font-weight: 400;
   color: var(--color-coffee-dark);
-  margin: 1.8rem 0 0.75rem;
+  margin: 2.6rem 0 1rem;
+  position: relative;
+  padding-left: 1.1rem;
+}
+.tiptap-editor .tiptap h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 0.55rem;
+  height: 1px;
+  background: var(--color-coffee-light);
 }
 .tiptap-editor .tiptap h3 {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 400;
   color: var(--color-coffee);
-  margin: 1.4rem 0 0.5rem;
+  margin: 1.8rem 0 0.7rem;
 }
-.tiptap-editor .tiptap strong { font-weight: 600; color: var(--color-coffee-dark); }
+.tiptap-editor .tiptap strong { font-weight: 500; color: var(--color-coffee-dark); }
 .tiptap-editor .tiptap em { font-style: italic; }
-.tiptap-editor .tiptap ul, .tiptap-editor .tiptap ol { padding-left: 1.5rem; margin-bottom: 1rem; }
-.tiptap-editor .tiptap li { margin-bottom: 0.3rem; }
+.tiptap-editor .tiptap u { text-decoration: underline; text-underline-offset: 3px; }
+.tiptap-editor .tiptap a { color: var(--color-coffee); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.tiptap-editor .tiptap ul, .tiptap-editor .tiptap ol { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+.tiptap-editor .tiptap li { margin-bottom: 0.4rem; }
 .tiptap-editor .tiptap ul li { list-style: disc; }
 .tiptap-editor .tiptap ol li { list-style: decimal; }
 .tiptap-editor .tiptap blockquote {
   border-left: 2px solid var(--color-coffee-light);
-  padding-left: 1.2rem;
+  padding: 0.3rem 0 0.3rem 1.6rem;
+  font-family: var(--font-display);
   font-style: italic;
+  font-size: 1.1rem;
   color: var(--color-text-soft);
-  margin: 1.5rem 0;
+  margin: 2.2rem 0;
 }
 .tiptap-editor .tiptap p.is-editor-empty::before {
   content: attr(data-placeholder);
