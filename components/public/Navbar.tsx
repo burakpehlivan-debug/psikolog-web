@@ -6,8 +6,8 @@ import { usePathname } from 'next/navigation'
 
 const links = [
   { href: '/', label: 'Ana Sayfa' },
+  { href: '/hakkinda', label: 'Hakkında' },
   { href: '/blog', label: 'Blog' },
-  { href: '/randevu', label: 'Randevu' },
   { href: '/iletisim', label: 'İletişim' },
 ]
 
@@ -87,6 +87,12 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
+          <Link
+            href="/randevu"
+            className="mt-5 block text-center font-sans text-[0.8rem] tracking-[0.12em] uppercase no-underline bg-coffee-dark text-cream px-5 py-3 hover:bg-coffee transition-colors duration-300"
+          >
+            Randevu Talep Et
+          </Link>
         </div>
       )}
     </>

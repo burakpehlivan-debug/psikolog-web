@@ -2,21 +2,8 @@ import RevealOnScroll from '@/components/ui/RevealOnScroll'
 
 const cards = [
   {
-    title: 'Anksiyete & Sınav Kaygısı',
-    desc: 'Sınav korkusu, sosyal kaygı, panik atak ve yaygın anksiyete bozukluğu gibi konularda BDT temelli yaklaşımlarla çalışıyorum.',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="52" height="52">
-        <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-        <line x1="6" y1="1" x2="6" y2="4" />
-        <line x1="10" y1="1" x2="10" y2="4" />
-        <line x1="14" y1="1" x2="14" y2="4" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Depresyon & Ruh Hali',
-    desc: 'Motivasyon kaybı, umutsuzluk, OKB ve sosyal fobi gibi duygusal zorluklarda yanınızda olarak iyileşme sürecini birlikte yürütüyoruz.',
+    title: 'Anksiyete, Depresyon & Travma',
+    desc: 'Sınav kaygısı, sosyal fobi, panik atak, depresyon, OKB, yeme bozuklukları ve travma gibi alanlarda BDT temelli çalışıyorum.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="52" height="52">
         <circle cx="12" cy="12" r="10" />
@@ -27,11 +14,22 @@ const cards = [
     ),
   },
   {
-    title: 'Yeme Bozuklukları & Travma',
-    desc: 'Beden imgesi sorunları, yeme bozuklukları ve travma sonrası stres bozukluğu alanlarında uzmanlaşmış destek sunuyorum.',
+    title: 'Çocuk & Ergen Psikolojisi',
+    desc: 'Dikkat güçlükleri, davranış sorunları, kimlik gelişimi, akran ilişkileri ve ergenliğe özgü zorluklarda çocuk ve gençlerle çalışıyorum.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="52" height="52">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Oyun Terapisi',
+    desc: 'Çocukların duygularını keşfetmeleri ve ifade etmeleri için oyun terapisi yöntemlerini yüz yüze seanslarla uyguluyorum.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="52" height="52">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
       </svg>
     ),
   },
