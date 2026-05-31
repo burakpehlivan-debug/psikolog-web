@@ -7,50 +7,68 @@ export const metadata: Metadata = {
   description: 'Klinik Psikolog ve Deneyimsel Oyun Terapisti Hande Pehlivan hakkında — uzmanlık alanları, eğitim ve terapi yaklaşımı.',
 }
 
-const education = [
+const infoCards = [
   {
-    year: '2020–2024',
-    title: '2. Düzey Deneyimsel Oyun Terapisi (DOT)',
-    place: 'Madalyon Psikiyatri Merkezi',
-    note: null,
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" />
+      </svg>
+    ),
+    title: 'Lisans',
+    desc: 'Beykent Üniversitesi, Fen-Edebiyat Fakültesi, Psikoloji Bölümü — Onur Öğrencisi',
   },
   {
-    year: '2017–2019',
-    title: 'Bilişsel Davranışçı Terapi Uzmanlık Eğitimi',
-    place: 'Prof. Dr. M. Hakan Türkçapar',
-    note: null,
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
+        <path d="M9 11l3 3L22 4" /><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+      </svg>
+    ),
+    title: 'Uzmanlık',
+    desc: 'Hasan Kalyoncu Üniversitesi, Sosyal Bilimler Enstitüsü, Klinik Psikoloji Yüksek Lisans',
   },
   {
-    year: '2017–2019',
-    title: 'Klinik Psikoloji Yüksek Lisans',
-    place: 'Hasan Kalyoncu Üniversitesi',
-    note: 'Tez: DEHB tanılı çocuklarda CNS Vital Signs nöropsikolojik test bataryası',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
+        <circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" />
+      </svg>
+    ),
+    title: 'Terapi Yaklaşımları',
+    desc: 'Bilişsel Davranışçı Terapi (BDT) · Deneyimsel Oyun Terapisi (2. Düzey DOT)',
   },
   {
-    year: '2013–2017',
-    title: 'Psikoloji Lisans — Onur Öğrencisi',
-    place: 'Beykent Üniversitesi',
-    note: 'Tam burslu · 3.73 GPA',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
+        <circle cx="12" cy="8" r="4" /><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+      </svg>
+    ),
+    title: 'İlgilendiği Yaş Aralığı',
+    desc: 'Çocuk · Ergen · Genç Yetişkin',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+      </svg>
+    ),
+    title: 'Çalışma Biçimi',
+    desc: 'Online terapi (BDT seansları) · Yüz yüze (Deneyimsel Oyun Terapisi seansları)',
   },
 ]
 
 const certifications = [
-  'WISC-IV Uygulayıcısı — Türk Psikologlar Derneği (2020)',
-  'Rorschach & TAT Eğitimi — Madalyon Psikiyatri Merkezi',
-  'Mindfulness Uzmanlık Eğitimi — Bahçeşehir Üniversitesi (2020)',
-  'Çocuk Objektif Testler Uygulamacısı — Mind Engineers Psikoloji (2020)',
+  '2. Düzey Deneyimsel Oyun Terapisi (DOT) — Madalyon Psikiyatri Merkezi, 2020–2024',
+  'WISC-IV Uygulayıcısı — Türk Psikologlar Derneği, 2020',
+  'Çocuk Objektif Testler Uygulamacısı — Mind Engineers Psikoloji, 2020',
+  'Mindfulness Uzman Eğitimi — Doç. Dr. Bilge Uzun / Bahçeşehir Üniversitesi, 2020',
+  'Rorschach Testi & TAT (Tematik Algı Testi) Eğitimi — Madalyon Psikiyatri Merkezi',
+  'Yeme Bozukluklarında Bilişsel Davranışçı Terapi — Prof. Dr. Levent Sütçigil, 2019',
+  'Çocuklarda Yeme Bozuklukları ve Aile Tabanlı Terapi — Uzm. Dr. Hakan Öğütlü, 2019',
+  'Kabul ve Kararlılık Terapisi — Vaka Değerlendirme, 2019',
+  'Narrative Terapi — Vaka Değerlendirme, 2019',
+  'Çocuk ve Ergenlerde Travma Sonrası Stres Bozukluğu ve BDT — Prof. Dr. Emine Gül Kapçı Seyitoğlu, 2017',
+  'Sosyal Fobide Bilişsel Davranışçı Terapi — Prof. Dr. M. Hakan Türkçapar, 2017',
+  'Bilişsel Davranışçı Terapi Uzmanlık Eğitimi — Prof. Dr. M. Hakan Türkçapar, 2017–2019',
   'Türk Psikologlar Derneği Üyesi',
-]
-
-const specialties = [
-  { label: 'DEHB', note: 'Dikkat Eksikliği & Hiperaktivite', featured: true },
-  { label: 'Sınav Kaygısı', note: null, featured: false },
-  { label: 'Yeme Bozuklukları', note: null, featured: false },
-  { label: 'Anksiyete & Panik', note: null, featured: false },
-  { label: 'Depresyon', note: null, featured: false },
-  { label: 'OKB', note: null, featured: false },
-  { label: 'Travma & TSSB', note: null, featured: false },
-  { label: 'Sosyal Fobi', note: null, featured: false },
 ]
 
 export default function HakkindaPage() {
@@ -85,150 +103,66 @@ export default function HakkindaPage() {
         </div>
       </section>
 
-      {/* Bio + Fotoğraf */}
-      <section className="bg-white py-24 px-8">
-        <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
-          <RevealOnScroll direction="left">
-            <div className="relative">
-              <div className="relative w-full max-w-[380px] aspect-[4/5] bg-beige flex items-center justify-center mx-auto">
-                <div
-                  className="absolute bottom-[-22px] right-[-22px] w-[72%] h-[72%] -z-10"
-                  style={{ border: '1px solid var(--color-beige-mid)' }}
-                />
-                <div className="text-center text-coffee font-display italic">
-                  <svg className="w-10 h-10 opacity-30 mx-auto mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <polyline points="21 15 16 10 5 21" />
-                  </svg>
-                  <p className="text-[0.85rem] opacity-45">Fotoğraf eklenecek</p>
-                </div>
-              </div>
-              <div className="absolute bottom-[-2.5rem] left-[-2rem] bg-coffee-dark text-cream px-7 py-6 max-w-[210px] z-10 font-display italic text-[1rem] leading-[1.65]">
-                &ldquo;Anlamlı değişim, doğru ortamda mümkündür.&rdquo;
-              </div>
-            </div>
-          </RevealOnScroll>
-
-          <RevealOnScroll direction="right">
-            <div className="md:pt-4">
-              <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-5">Terapistini Tanı</span>
-              <p className="text-text-soft text-[0.93rem] leading-[1.95] mb-5">
-                Klinik Psikolog olarak DEHB, anksiyete, depresyon, sınav kaygısı, yeme bozuklukları ve travma alanlarında geç yetişkinler, çocuklar ve ergenlerle çalışıyorum. Danışanlarımın kendilerini güvende ve anlaşılmış hissedebilecekleri bir terapi ortamı yaratmak önceliğim.
-              </p>
-              <p className="text-text-soft text-[0.93rem] leading-[1.95] mb-5">
-                Geç yetişkin ve ergenlerle Bilişsel Davranışçı Terapi (BDT) çerçevesinde çalışırken, çocuklarla bütüncül ve ayrı bir ekol olan Deneyimsel Oyun Terapisi (DOT) ile yüz yüze seanslar yürütüyorum.
-              </p>
-              <p className="text-text-soft text-[0.93rem] leading-[1.95]">
-                Terapide anlamlı değişimin doğru ortamda ve güvenilir bir ilişki içinde mümkün olduğuna inanıyorum. Benim rolüm bu yolda yanınızda olmak; çözümleri birlikte keşfetmek.
-              </p>
-            </div>
-          </RevealOnScroll>
-        </div>
-      </section>
-
-      {/* Uzmanlık Alanları */}
-      <section className="bg-cream py-20 px-8">
-        <div className="max-w-[1100px] mx-auto">
-          <RevealOnScroll>
-            <div className="mb-12">
-              <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-4">Çalışma Alanları</span>
-              <h2 className="text-[1.9rem] text-coffee-dark">Uzmanlık Alanları</h2>
-              <div className="w-10 h-px bg-coffee-light mt-5" />
-            </div>
-          </RevealOnScroll>
-          <RevealOnScroll direction="up">
-            <div className="flex flex-wrap gap-3">
-              {specialties.map(({ label, note, featured }) => (
-                <div
-                  key={label}
-                  className={`px-5 py-2.5 text-[0.82rem] tracking-[0.06em] ${
-                    featured
-                      ? 'bg-coffee-dark text-cream font-normal'
-                      : 'bg-white text-text-soft border border-beige'
-                  }`}
-                >
-                  {label}
-                  {note && <span className="ml-2 text-[0.7rem] opacity-70">— {note}</span>}
-                </div>
-              ))}
-            </div>
-          </RevealOnScroll>
-        </div>
-      </section>
-
-      {/* Nasıl Çalışıyorum */}
+      {/* Özgeçmiş — Prose Bio */}
       <section className="bg-white py-20 px-8">
-        <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
-          <RevealOnScroll direction="left">
-            <div>
-              <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-4">Terapi Yaklaşımı</span>
-              <h2 className="text-[1.9rem] text-coffee-dark mb-6">Bilişsel Davranışçı Terapi</h2>
-              <p className="text-[0.88rem] text-text-soft leading-[1.95] mb-4">
-                Geç yetişkin ve ergenlerle yürüttüğüm bireysel seansların temel çerçevesi BDT&apos;dir. Düşüncelerimiz, duygularımız ve davranışlarımız arasındaki bağlantıları fark etmek ve bu kalıpları dönüştürmek, iyileşme sürecinin merkezinde yer alır.
-              </p>
-              <p className="text-[0.88rem] text-text-soft leading-[1.95]">
-                Seanslarımda önce sizi ve hikayenizi anlamaya çalışırım. Hedeflerimizi birlikte netleştirip somut, uygulanabilir adımlarla ilerleriz. Seanslar online yürütülmektedir.
-              </p>
-            </div>
-          </RevealOnScroll>
-
-          <RevealOnScroll direction="right">
-            <div>
-              <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-4">Terapi Yaklaşımı</span>
-              <h2 className="text-[1.9rem] text-coffee-dark mb-6">Deneyimsel Oyun Terapisi</h2>
-              <p className="text-[0.88rem] text-text-soft leading-[1.95] mb-4">
-                Deneyimsel Oyun Terapisi, çocukların iç dünyalarını, duygularını ve deneyimlerini oyun aracılığıyla ifade etmelerine ve işlemlemelerine olanak tanıyan bütüncül bir terapötik ekoldür. BDT&apos;nin bir uzantısı değil; kendi içinde bağımsız, köklü bir yaklaşımdır.
-              </p>
-              <p className="text-[0.88rem] text-text-soft leading-[1.95]">
-                2. Düzey DOT eğitimini tamamlamış bir Deneyimsel Oyun Terapisti olarak çocuklarla yüz yüze seanslar yürütüyorum.
-              </p>
-            </div>
+        <div className="max-w-[800px] mx-auto">
+          <RevealOnScroll>
+            <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-6">Özgeçmiş</span>
+            <p className="text-text-soft text-[0.93rem] leading-[2] mb-5">
+              Klinik Psikolog olarak lisans eğitimini Beykent Üniversitesi Psikoloji Bölümü&apos;nde onur derecesiyle tamamladı. Ardından Hasan Kalyoncu Üniversitesi Klinik Psikoloji Yüksek Lisans programına başladı; tez çalışması olarak DEHB tanılı çocuk ve ergenlerin dikkat alt tiplerine göre nöropsikolojik test bataryası sonuçlarını inceledi. Yüksek lisans sürecinde Prof. Dr. M. Hakan Türkçapar eğitiminde Bilişsel Davranışçı Terapi uzmanlık eğitimini tamamladı.
+            </p>
+            <p className="text-text-soft text-[0.93rem] leading-[2] mb-5">
+              Mezuniyetinin ardından Bahçeşehir Koleji bünyesinde okul psikoloğu olarak çalıştı; çocuklar ve ergenlerle bireysel görüşmeler yürüttü, ebeveyn destek programları düzenledi. Bu dönemde DEHB, dikkat güçlükleri ve sınav kaygısı alanlarında klinik deneyimini derinleştirdi.
+            </p>
+            <p className="text-text-soft text-[0.93rem] leading-[2]">
+              2020–2024 yılları arasında Madalyon Psikiyatri Merkezi&apos;nde Klinik Psikolog olarak görev yaptı. Bu dönemde 2. Düzey Deneyimsel Oyun Terapisi eğitimini, Rorschach ve TAT gibi projektif testlerin uygulamasını tamamladı. 2024&apos;ten bu yana bireysel online terapi pratiğini sürdürmektedir.
+            </p>
           </RevealOnScroll>
         </div>
       </section>
 
-      {/* Eğitim */}
+      {/* Info Kartlar */}
       <section className="bg-cream py-20 px-8">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[900px] mx-auto">
           <RevealOnScroll>
-            <div className="mb-12">
-              <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-4">Akademik Geçmiş</span>
-              <h2 className="text-[1.9rem] text-coffee-dark">Eğitim & Sertifikalar</h2>
-              <div className="w-10 h-px bg-coffee-light mt-5" />
-            </div>
+            <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-10">Genel Bilgiler</span>
           </RevealOnScroll>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-0">
-            {/* Sol: Eğitim */}
-            <div>
-              {education.map(({ year, title, place, note }, i) => (
-                <RevealOnScroll key={i} direction="left" delay={i * 80}>
-                  <div className="py-6 border-b border-beige last:border-0">
-                    <span className="block font-sans text-[0.7rem] tracking-[0.12em] text-coffee uppercase mb-1">{year}</span>
-                    <p className="text-[0.9rem] text-coffee-dark mb-0.5">{title}</p>
-                    <p className="text-[0.8rem] text-text-soft">{place}</p>
-                    {note && <p className="text-[0.75rem] text-text-soft/65 mt-1 italic">{note}</p>}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {infoCards.map(({ icon, title, desc }, i) => (
+              <RevealOnScroll key={title} direction="up" delay={i * 80}>
+                <div className="bg-white px-7 py-6 flex items-start gap-5">
+                  <div className="w-[48px] h-[48px] bg-beige rounded-full flex items-center justify-center flex-shrink-0 text-coffee">
+                    {icon}
                   </div>
-                </RevealOnScroll>
-              ))}
-            </div>
-
-            {/* Sağ: Sertifikalar */}
-            <div className="md:border-l md:border-beige md:pl-16">
-              <RevealOnScroll direction="right">
-                <p className="font-sans text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-6 pt-6 md:pt-0">Sertifikalar & Üyelik</p>
-                <div className="flex flex-col gap-5">
-                  {certifications.map((c, i) => (
-                    <div key={i} className="flex items-start gap-3 text-[0.83rem] text-text-soft">
-                      <span className="w-[5px] h-[5px] rounded-full bg-coffee flex-shrink-0 mt-[7px]" />
-                      {c}
-                    </div>
-                  ))}
+                  <div>
+                    <p className="font-serif text-[1rem] text-coffee-dark mb-1">{title}</p>
+                    <p className="text-[0.82rem] text-text-soft leading-[1.7]">{desc}</p>
+                  </div>
                 </div>
               </RevealOnScroll>
-            </div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* Sertifikalar & Eğitimler */}
+      <section className="bg-white py-20 px-8">
+        <div className="max-w-[800px] mx-auto">
+          <RevealOnScroll>
+            <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-4">Nitelikler</span>
+            <h2 className="text-[1.9rem] text-coffee-dark mb-3">Sertifikalar ve Diğer Eğitimler</h2>
+            <div className="w-10 h-px bg-coffee-light mb-10" />
+          </RevealOnScroll>
+          <RevealOnScroll direction="up">
+            <ul className="flex flex-col gap-4">
+              {certifications.map((c, i) => (
+                <li key={i} className="flex items-start gap-4 text-[0.88rem] text-text-soft leading-[1.7]">
+                  <span className="w-[5px] h-[5px] rounded-full bg-coffee flex-shrink-0 mt-[9px]" />
+                  {c}
+                </li>
+              ))}
+            </ul>
+          </RevealOnScroll>
         </div>
       </section>
 

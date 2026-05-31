@@ -4,7 +4,7 @@ const cards = [
   {
     title: 'DEHB',
     subtitle: 'Dikkat Eksikliği & Hiperaktivite Bozukluğu',
-    desc: 'Çocuk, ergen ve geç yetişkinlerde DEHB değerlendirmesi ve terapötik müdahale. Uzmanlık tezimin konusu olan bu alan, çalışmalarımın odak noktalarından biridir.',
+    desc: 'Çocuk, ergen ve genç yetişkinlerde DEHB değerlendirmesi ve terapötik müdahale. Uzmanlık tezimin konusu olan bu alan, çalışmalarımın odak noktalarından biridir.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="52" height="52">
         <circle cx="12" cy="12" r="10" />
