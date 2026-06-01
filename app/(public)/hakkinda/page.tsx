@@ -23,8 +23,8 @@ const infoCards = [
         <path d="M9 11l3 3L22 4" /><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
       </svg>
     ),
-    title: 'Uzmanlık',
-    desc: 'Hasan Kalyoncu Üniversitesi, Sosyal Bilimler Enstitüsü, Klinik Psikoloji Yüksek Lisans',
+    title: 'Yüksek Lisans',
+    desc: 'Hasan Kalyoncu Üniversitesi, Sosyal Bilimler Enstitüsü, Klinik Psikoloji',
   },
   {
     icon: (
@@ -56,20 +56,53 @@ const infoCards = [
 ]
 
 const certifications = [
+  'Rorschach Testi & TAT (Tematik Algı Testi) Eğitimi — Dr. Bengi Pirim Düşgör / İstanbul Üniversitesi, 2023',
   '2. Düzey Deneyimsel Oyun Terapisi (DOT) — Byron Norton, 2022',
   '1. Düzey Deneyimsel Oyun Terapisi (DOT) — Nilüfer Devecigil, 2021',
   'WISC-IV Uygulayıcısı — Türk Psikologlar Derneği, 2020',
   'Çocuk Objektif Testler Uygulamacısı — Mind Engineers Psikoloji, 2020',
   'Mindfulness Uzman Eğitimi — Doç. Dr. Bilge Uzun / Bahçeşehir Üniversitesi, 2020',
-  'Rorschach Testi & TAT (Tematik Algı Testi) Eğitimi — Dr. Bengi Pirim Düşgör / İstanbul Üniversitesi, 2023',
+  'Pandemi Sürecinde Ebeveyn Tutumları — Prof. Dr. Özgür Öner / Bahçeşehir Üniversitesi, 2020',
+  'Üstün Potansiyelli Öğrencilerin Eğitimi — Prof. Dr. Derin Atay / Bahçeşehir Üniversitesi, 2019',
   'Yeme Bozukluklarında Bilişsel Davranışçı Terapi — Prof. Dr. Levent Sütçigil, 2019',
   'Çocuklarda Yeme Bozuklukları ve Aile Tabanlı Terapi — Uzm. Dr. Hakan Öğütlü, 2019',
   'Kabul ve Kararlılık Terapisi — Vaka Değerlendirme, 2019',
   'Narrative Terapi — Vaka Değerlendirme, 2019',
+  'Aile Dinamikleri — Vaka Değerlendirme, 2019',
+  'Bilişsel Davranışçı Terapi Uzmanlık Eğitimi — Prof. Dr. M. Hakan Türkçapar, 2017–2019',
   'Çocuk ve Ergenlerde Travma Sonrası Stres Bozukluğu ve BDT — Prof. Dr. Emine Gül Kapçı Seyitoğlu, 2017',
   'Sosyal Fobide Bilişsel Davranışçı Terapi — Prof. Dr. M. Hakan Türkçapar, 2017',
-  'Bilişsel Davranışçı Terapi Uzmanlık Eğitimi — Prof. Dr. M. Hakan Türkçapar, 2017–2019',
+  'Sınav Kaygısı: BDT Bakış Açısı — Doç. Dr. Kadir Özdel, 2017',
+  'Terapi Odasına Hazırlık Eğitimi, 2017',
+  'Nöropsikoloji Semineri, 2017',
+  'Borderline Kişilik Bozukluğu: Görüşme Teknikleri ve Terapötik Müdahaleler — Klinik ve Adli Psikoloji Derneği, 2015',
+  'Bipolar Bozuklukta Bilişsel Davranışçı Terapi — Klinik ve Adli Psikoloji Derneği, 2015',
+  'Travma ve Travma Sonrası Stres Bozukluğu Tedavisi — Klinik ve Adli Psikoloji Derneği, 2015',
+  'Günümüzde Psikoterapi — Prof. Dr. Kemal Sayar, 2015',
   'Türk Psikologlar Derneği Üyesi',
+]
+
+const internships = [
+  {
+    place: 'Prof. Dr. Eyüp Sabri Ercan Kliniği — İzmir',
+    period: 'Haz – Ağu 2018',
+    desc: 'Çocuk-Ergen Psikiyatrisi. DEHB ve Karşı Olma Karşı Gelme Bozukluğu tanılı çocuk ve ergen görüşmeleri, aile görüşmeleri. Uzmanlık tezi için CNS Vital Signs dikkat testi verileri toplandı.',
+  },
+  {
+    place: 'Kanuni Sultan Süleyman Eğitim ve Araştırma Hastanesi',
+    period: 'Eki 2016 – Şub 2017',
+    desc: 'MMPI uygulama ve yorumlama, WISC-R gözlemi, SCL-90, Porteus Labirentleri, Mini-Mental Durum Değerlendirmesi ve Nöropsikolojik Değerlendirme Testi (NPT) uygulamaları.',
+  },
+  {
+    place: 'Marmara Üniversitesi Pendik Eğitim ve Araştırma Hastanesi',
+    period: 'Ağu 2016',
+    desc: 'Servis ve poliklinik gözlemi. Depresyon, anksiyete, panik bozukluk ve bipolar bozukluk vakalarında grup terapisi gözlem ve katılımı.',
+  },
+  {
+    place: 'Bakırköy Mazhar Osman Ruh Sağlığı ve Sinir Hastalıkları Hastanesi',
+    period: 'Haz 2016',
+    desc: '9. Psikiyatri Servisi. Psikoz, bipolar bozukluk, şizofreni, adli vakalar ve ağır depresyon olgularında tanı görüşmeleri ve aile görüşmeleri gözlemi.',
+  },
 ]
 
 export default function HakkindaPage() {
@@ -110,13 +143,16 @@ export default function HakkindaPage() {
           <RevealOnScroll>
             <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-6">Özgeçmiş</span>
             <p className="text-text-soft text-[0.93rem] leading-[2] mb-5">
-              Klinik Psikolog olarak lisans eğitimini Beykent Üniversitesi Psikoloji Bölümü&apos;nde onur derecesiyle tamamladı. Ardından Hasan Kalyoncu Üniversitesi Klinik Psikoloji Yüksek Lisans programına başladı; tez çalışması olarak DEHB tanılı çocuk ve ergenlerin dikkat alt tiplerine göre nöropsikolojik test bataryası sonuçlarını inceledi. Yüksek lisans sürecinde Prof. Dr. M. Hakan Türkçapar eğitiminde Bilişsel Davranışçı Terapi uzmanlık eğitimini tamamladı.
+              Lisans eğitimini Beykent Üniversitesi Psikoloji Bölümü&apos;nde onur derecesiyle tamamladı. Ardından Hasan Kalyoncu Üniversitesi Klinik Psikoloji Yüksek Lisans programına başladı; DEHB tanılı çocuk ve ergenlerin alt tiplerine göre CNS Vital Signs nöropsikolojik test bataryası sonuçlarını karşılaştıran tez çalışmasını yürüttü. Aynı dönemde Prof. Dr. M. Hakan Türkçapar eğitiminde Bilişsel Davranışçı Terapi uzmanlık eğitimini tamamladı.
             </p>
             <p className="text-text-soft text-[0.93rem] leading-[2] mb-5">
-              Mezuniyetinin ardından Bahçeşehir Koleji bünyesinde okul psikoloğu olarak çalıştı; çocuklar ve ergenlerle bireysel görüşmeler yürüttü, ebeveyn destek programları düzenledi. Bu dönemde DEHB, dikkat güçlükleri ve sınav kaygısı alanlarında klinik deneyimini derinleştirdi.
+              Yüksek lisans sürecinde eğitimiyle eş zamanlı olarak klinik pratiğe başladı. Şanlıurfa&apos;da Fizyo Hayat Sağlıklı Yaşam Merkezi&apos;nde psikolog olarak depresyon, anksiyete ve travma vakalarında BDT uygulaması yaptı; Hasan Kalyoncu Üniversitesi PDR Merkezi&apos;nde süpervizyon altında 60 oturumluk bireysel terapi gerçekleştirdi. İzmir&apos;de Prof. Dr. Eyüp Sabri Ercan Kliniği&apos;nde DEHB tanılı çocuk ve ergenlerle yürüttüğü staj ise tez çalışmasının veri toplama süreciyle iç içe geçti.
+            </p>
+            <p className="text-text-soft text-[0.93rem] leading-[2] mb-5">
+              Yüksek lisansın son döneminde Bahçeşehir Koleji bünyesinde okul psikoloğu olarak çalışmaya başladı; bireysel görüşmeler, ebeveyn destek programları ve mindfulness uygulamaları yürüttü. Yüksek lisansını tamamlayarak Klinik Psikolog unvanını kazandıktan sonra 2020&apos;de Madalyon Psikiyatri Merkezi&apos;nde göreve başladı. Burada sınav kaygısı, yeme bozukluğu, anksiyete, depresyon ve OKB başta olmak üzere nevrotik bozukluklarda BDT ile çalıştı; 1. ve 2. Düzey Deneyimsel Oyun Terapisi eğitimlerini ve Rorschach ile TAT gibi projektif test eğitimlerini tamamladı.
             </p>
             <p className="text-text-soft text-[0.93rem] leading-[2]">
-              2020–2024 yılları arasında Madalyon Psikiyatri Merkezi&apos;nde Klinik Psikolog olarak görev yaptı. Bu dönemde 2. Düzey Deneyimsel Oyun Terapisi eğitimini, Rorschach ve TAT gibi projektif testlerin uygulamasını tamamladı. 2024&apos;ten bu yana bireysel online terapi pratiğini sürdürmektedir.
+              2024&apos;ten bu yana bireysel online terapi pratiğini sürdürmektedir.
             </p>
           </RevealOnScroll>
         </div>
@@ -164,6 +200,28 @@ export default function HakkindaPage() {
               ))}
             </ul>
           </RevealOnScroll>
+
+          {/* Klinik Stajlar */}
+          <RevealOnScroll>
+            <div className="w-full h-px bg-beige-mid mt-14 mb-10" />
+            <h3 className="font-serif text-[1.35rem] text-coffee-dark mb-8">Klinik Stajlar</h3>
+          </RevealOnScroll>
+          <div className="flex flex-col gap-8">
+            {internships.map(({ place, period, desc }, i) => (
+              <RevealOnScroll key={i} direction="up" delay={i * 60}>
+                <div className="flex gap-6 items-start">
+                  <div className="flex-shrink-0 pt-[3px]">
+                    <span className="w-[5px] h-[5px] rounded-full bg-coffee block" />
+                  </div>
+                  <div>
+                    <p className="text-[0.88rem] font-medium text-coffee-dark leading-[1.5]">{place}</p>
+                    <p className="text-[0.75rem] text-coffee/70 tracking-[0.06em] uppercase mb-1">{period}</p>
+                    <p className="text-[0.85rem] text-text-soft leading-[1.75]">{desc}</p>
+                  </div>
+                </div>
+              </RevealOnScroll>
+            ))}
+          </div>
         </div>
       </section>
 
