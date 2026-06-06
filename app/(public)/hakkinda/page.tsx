@@ -15,7 +15,7 @@ const infoCards = [
       </svg>
     ),
     title: 'Lisans',
-    desc: 'Beykent Üniversitesi, Fen-Edebiyat Fakültesi, Psikoloji Bölümü — Onur Öğrencisi',
+    desc: 'Beykent Üniversitesi, Fen-Edebiyat Fakültesi, Psikoloji Bölümü — Yüksek Onur Öğrencisi (Tam Burslu)',
   },
   {
     icon: (
@@ -56,29 +56,12 @@ const infoCards = [
 ]
 
 const certifications = [
-  'Rorschach Testi & TAT (Tematik Algı Testi) Eğitimi — Dr. Bengi Pirim Düşgör / İstanbul Üniversitesi, 2023',
-  '2. Düzey Deneyimsel Oyun Terapisi (DOT) — Byron Norton, 2022',
-  '1. Düzey Deneyimsel Oyun Terapisi (DOT) — Nilüfer Devecigil, 2021',
-  'WISC-IV Uygulayıcısı — Türk Psikologlar Derneği, 2020',
-  'Çocuk Objektif Testler Uygulamacısı — Mind Engineers Psikoloji, 2020',
-  'Mindfulness Uzman Eğitimi — Doç. Dr. Bilge Uzun / Bahçeşehir Üniversitesi, 2020',
-  'Pandemi Sürecinde Ebeveyn Tutumları — Prof. Dr. Özgür Öner / Bahçeşehir Üniversitesi, 2020',
-  'Üstün Potansiyelli Öğrencilerin Eğitimi — Prof. Dr. Derin Atay / Bahçeşehir Üniversitesi, 2019',
-  'Yeme Bozukluklarında Bilişsel Davranışçı Terapi — Prof. Dr. Levent Sütçigil, 2019',
-  'Çocuklarda Yeme Bozuklukları ve Aile Tabanlı Terapi — Uzm. Dr. Hakan Öğütlü, 2019',
-  'Kabul ve Kararlılık Terapisi — Vaka Değerlendirme, 2019',
-  'Narrative Terapi — Vaka Değerlendirme, 2019',
-  'Aile Dinamikleri — Vaka Değerlendirme, 2019',
-  'Bilişsel Davranışçı Terapi Uzmanlık Eğitimi — Prof. Dr. M. Hakan Türkçapar, 2017–2019',
-  'Çocuk ve Ergenlerde Travma Sonrası Stres Bozukluğu ve BDT — Prof. Dr. Emine Gül Kapçı Seyitoğlu, 2017',
-  'Sosyal Fobide Bilişsel Davranışçı Terapi — Prof. Dr. M. Hakan Türkçapar, 2017',
-  'Sınav Kaygısı: BDT Bakış Açısı — Doç. Dr. Kadir Özdel, 2017',
-  'Terapi Odasına Hazırlık Eğitimi, 2017',
-  'Nöropsikoloji Semineri, 2017',
-  'Borderline Kişilik Bozukluğu: Görüşme Teknikleri ve Terapötik Müdahaleler — Klinik ve Adli Psikoloji Derneği, 2015',
-  'Bipolar Bozuklukta Bilişsel Davranışçı Terapi — Klinik ve Adli Psikoloji Derneği, 2015',
-  'Travma ve Travma Sonrası Stres Bozukluğu Tedavisi — Klinik ve Adli Psikoloji Derneği, 2015',
-  'Günümüzde Psikoterapi — Prof. Dr. Kemal Sayar, 2015',
+  'WISC-4 Çocuklar için Zeka Ölçeği Eğitimi ve Sertifikasyonu — Türk Psikologlar Derneği, 2019',
+  'Bilişsel Davranışçı Terapi ve Uygulamalı Süpervizyonu — Hasan Kalyoncu Üniversitesi / Prof. Dr. M. Hakan Türkçapar, Prof. Dr. Levent Sütçigil, 2018',
+  'Moxo Dikkat Testi Uygulayıcı Sertifikası, 2019',
+  'Deneyimsel Oyun Terapisi 1. Düzey Eğitimi — Nilüfer Devecigil, 2021',
+  'Deneyimsel Oyun Terapisi 2. Düzey Eğitimi — Byron Norton & Nilüfer Devecigil, 2022',
+  'Çocuk ve Ergen Projektif Testler Eğitimi — İstanbul Üniversitesi / Dr. Bengi Pirim Düşgör, 2024',
   'Türk Psikologlar Derneği Üyesi',
 ]
 
@@ -131,7 +114,7 @@ export default function HakkindaPage() {
           <h1 className="text-[clamp(2.6rem,5vw,3.8rem)] text-cream mb-6 leading-[1.1]">
             Hande <em className="italic text-coffee-light font-normal">Pehlivan</em>
           </h1>
-          <p className="text-[0.95rem] text-cream/70 max-w-md mx-auto leading-[1.95]">
+          <p className="text-[0.95rem] text-cream/70 max-w-md mx-auto leading-[1.95] font-sans">
             DEHB, anksiyete, depresyon ve çocuk-ergen psikolojisi alanlarında BDT ve Deneyimsel Oyun Terapisi ile çalışıyorum.
           </p>
         </div>
@@ -142,16 +125,19 @@ export default function HakkindaPage() {
         <div className="max-w-[800px] mx-auto">
           <RevealOnScroll>
             <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-6">Özgeçmiş</span>
-            <p className="text-text-soft text-[0.93rem] leading-[2] mb-5">
-              Lisans eğitimini Beykent Üniversitesi Psikoloji Bölümü&apos;nde onur derecesiyle tamamladı. Ardından Hasan Kalyoncu Üniversitesi Klinik Psikoloji Yüksek Lisans programına başladı; DEHB tanılı çocuk ve ergenlerin alt tiplerine göre CNS Vital Signs nöropsikolojik test bataryası sonuçlarını karşılaştıran tez çalışmasını yürüttü. Aynı dönemde Prof. Dr. M. Hakan Türkçapar eğitiminde Bilişsel Davranışçı Terapi uzmanlık eğitimini tamamladı.
+            <p className="text-text-soft text-[0.93rem] leading-[2] mb-5 font-sans">
+              Klinik Psikolog Hande Pehlivan, lisans eğitimini Beykent Üniversitesi Psikoloji Bölümü&apos;nde (tam burslu) yüksek onur derecesiyle tamamladı. Lisans eğitimi süresince Bakırköy Mazhar Osman Ruh Sağlığı ve Sinir Hastalıkları Hastanesi (2016), Marmara Üniversitesi Pendik Eğitim ve Araştırma Hastanesi (2016) ve Kanuni Sultan Süleyman Eğitim ve Araştırma Hastanesi&apos;nde (2017) stajlar yaptı.
             </p>
-            <p className="text-text-soft text-[0.93rem] leading-[2] mb-5">
-              Yüksek lisans sürecinde eğitimiyle eş zamanlı olarak klinik pratiğe başladı. Şanlıurfa&apos;da Fizyo Hayat Sağlıklı Yaşam Merkezi&apos;nde psikolog olarak depresyon, anksiyete ve travma vakalarında BDT uygulaması yaptı; Hasan Kalyoncu Üniversitesi PDR Merkezi&apos;nde süpervizyon altında 60 oturumluk bireysel terapi gerçekleştirdi. İzmir&apos;de Prof. Dr. Eyüp Sabri Ercan Kliniği&apos;nde DEHB tanılı çocuk ve ergenlerle yürüttüğü staj ise tez çalışmasının veri toplama süreciyle iç içe geçti.
+            <p className="text-text-soft text-[0.93rem] leading-[2] mb-5 font-sans">
+              Ardından Hasan Kalyoncu Üniversitesi Klinik Psikoloji Yüksek Lisans programını tamamlayarak uzmanlık unvanını aldı. DEHB tanılı çocuk ve ergenlerin alt tiplerine göre CNS Vital Signs nöropsikolojik test bataryası sonuçlarını karşılaştıran tez çalışmasını yürüttü; aynı dönemde Prof. Dr. M. Hakan Türkçapar eğitiminde Bilişsel Davranışçı Terapi uzmanlık eğitimini tamamladı. Yüksek lisans sürecinde Şanlıurfa&apos;da Fizyo Hayat Sağlıklı Yaşam Merkezi&apos;nde depresyon, yaygın anksiyete ve travma vakalarında BDT uygulaması yaptı; HKÜ PDR Merkezi&apos;nde süpervizyon altında 60 oturumluk bireysel terapi gerçekleştirdi. İzmir&apos;de Prof. Dr. Eyüp Sabri Ercan Kliniği&apos;nde DEHB tanılı çocuk ve ergenlerle yürüttüğü staj ise tez çalışmasının veri toplama süreciyle iç içe geçti.
             </p>
-            <p className="text-text-soft text-[0.93rem] leading-[2] mb-5">
-              Yüksek lisansın son döneminde Bahçeşehir Koleji bünyesinde okul psikoloğu olarak çalışmaya başladı; bireysel görüşmeler, ebeveyn destek programları ve mindfulness uygulamaları yürüttü. Yüksek lisansını tamamlayarak Klinik Psikolog unvanını kazandıktan sonra 2020&apos;de Madalyon Psikiyatri Merkezi&apos;nde göreve başladı. Burada sınav kaygısı, yeme bozukluğu, anksiyete, depresyon ve OKB başta olmak üzere nevrotik bozukluklarda BDT ile çalıştı; 1. ve 2. Düzey Deneyimsel Oyun Terapisi eğitimlerini ve Rorschach ile TAT gibi projektif test eğitimlerini tamamladı.
+            <p className="text-text-soft text-[0.93rem] leading-[2] mb-5 font-sans">
+              2018–2020 yılları arasında pedagojik formasyon eğitimini de tamamlayarak Bahçeşehir Koleji bünyesinde okul psikoloğu / psikolojik danışman olarak çalıştı; bireysel görüşmeler, ebeveyn destek programları, PASS teorisi temelli dikkat ve düşünme becerileri çalışmaları ve mindfulness uygulamaları yürüttü.
             </p>
-            <p className="text-text-soft text-[0.93rem] leading-[2]">
+            <p className="text-text-soft text-[0.93rem] leading-[2] mb-5 font-sans">
+              2020–2023 yılları arasında Madalyon Psikiyatri Merkezi&apos;nde çocuk ve ergenlerle çalıştı. Sınav kaygısı, yeme bozukluğu, anksiyete, depresyon ve OKB başta olmak üzere nevrotik bozukluklarda BDT ile çalıştı; 1. ve 2. Düzey Deneyimsel Oyun Terapisi eğitimlerini ve projektif test eğitimlerini tamamladı.
+            </p>
+            <p className="text-text-soft text-[0.93rem] leading-[2] font-sans">
               2024&apos;ten bu yana bireysel online terapi pratiğini sürdürmektedir.
             </p>
           </RevealOnScroll>
@@ -172,8 +158,8 @@ export default function HakkindaPage() {
                     {icon}
                   </div>
                   <div>
-                    <p className="font-serif text-[1rem] text-coffee-dark mb-1">{title}</p>
-                    <p className="text-[0.82rem] text-text-soft leading-[1.7]">{desc}</p>
+                    <p className="font-serif text-[1.05rem] text-coffee-dark mb-1">{title}</p>
+                    <p className="text-[0.82rem] text-text-soft leading-[1.7] font-sans">{desc}</p>
                   </div>
                 </div>
               </RevealOnScroll>
@@ -187,13 +173,13 @@ export default function HakkindaPage() {
         <div className="max-w-[800px] mx-auto">
           <RevealOnScroll>
             <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-4">Nitelikler</span>
-            <h2 className="text-[1.9rem] text-coffee-dark mb-3">Sertifikalar ve Diğer Eğitimler</h2>
+            <h2 className="font-serif text-[1.9rem] text-coffee-dark mb-3">Sertifikalar ve Eğitimler</h2>
             <div className="w-10 h-px bg-coffee-light mb-10" />
           </RevealOnScroll>
           <RevealOnScroll direction="up">
             <ul className="flex flex-col gap-4">
               {certifications.map((c, i) => (
-                <li key={i} className="flex items-start gap-4 text-[0.88rem] text-text-soft leading-[1.7]">
+                <li key={i} className="flex items-start gap-4 text-[0.88rem] text-text-soft leading-[1.7] font-sans">
                   <span className="w-[5px] h-[5px] rounded-full bg-coffee flex-shrink-0 mt-[9px]" />
                   {c}
                 </li>
@@ -214,9 +200,9 @@ export default function HakkindaPage() {
                     <span className="w-[5px] h-[5px] rounded-full bg-coffee block" />
                   </div>
                   <div>
-                    <p className="text-[0.88rem] font-medium text-coffee-dark leading-[1.5]">{place}</p>
-                    <p className="text-[0.75rem] text-coffee/70 tracking-[0.06em] uppercase mb-1">{period}</p>
-                    <p className="text-[0.85rem] text-text-soft leading-[1.75]">{desc}</p>
+                    <p className="text-[0.88rem] font-medium text-coffee-dark leading-[1.5] font-sans">{place}</p>
+                    <p className="text-[0.75rem] text-coffee/70 tracking-[0.06em] uppercase mb-1 font-sans">{period}</p>
+                    <p className="text-[0.85rem] text-text-soft leading-[1.75] font-sans">{desc}</p>
                   </div>
                 </div>
               </RevealOnScroll>
@@ -228,8 +214,8 @@ export default function HakkindaPage() {
       {/* CTA */}
       <section className="bg-coffee-dark py-22 px-8 text-center">
         <RevealOnScroll direction="scale">
-          <h2 className="text-[2.2rem] text-cream mb-4">Bir adım atmak yeter.</h2>
-          <p className="text-[0.92rem] text-cream/70 max-w-[460px] mx-auto mb-10">
+          <h2 className="font-serif text-[2.2rem] text-cream mb-4">Bir adım atmak yeter.</h2>
+          <p className="text-[0.92rem] text-cream/70 max-w-[460px] mx-auto mb-10 font-sans">
             Kendiniz veya çocuğunuz için profesyonel destek almak istiyorsanız benimle iletişime geçmekten çekinmeyin.
           </p>
           <Link

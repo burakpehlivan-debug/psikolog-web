@@ -10,9 +10,9 @@
   --color-text-main: #2C1F17;
   --color-text-soft: #6B5448;
 
-  --font-serif: "Playfair Display", Georgia, serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Jost", system-ui, sans-serif;
+  --font-sans: "Source Sans 3", system-ui, sans-serif;
 
   --shadow-card: 0 2px 24px rgba(74, 55, 40, 0.10);
   --shadow-card-lg: 0 14px 40px rgba(74, 55, 40, 0.16);
