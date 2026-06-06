@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function HeroSection() {
   return (
@@ -54,15 +55,15 @@ export default function HeroSection() {
             className="absolute top-[-18px] left-[-18px] right-[18px] bottom-[18px] pointer-events-none"
             style={{ border: '1px solid var(--color-beige-mid)' }}
           />
-          <div className="relative z-10 w-full aspect-[3/4] bg-beige flex items-center justify-center overflow-hidden">
-            <div className="text-center text-coffee font-display italic">
-              <svg aria-hidden="true" className="w-12 h-12 opacity-30 mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <circle cx="8.5" cy="8.5" r="1.5" />
-                <polyline points="21 15 16 10 5 21" />
-              </svg>
-              <p className="text-[0.85rem] opacity-45">Fotoğraf eklenecek</p>
-            </div>
+          <div className="relative z-10 w-full aspect-[3/4] bg-beige overflow-hidden">
+            <Image
+              src="https://rhknksjslrvlrpewazhe.supabase.co/storage/v1/object/public/blog-images/D8132DC0-F116-4BF8-A1BD-C595AE0F90E8.png"
+              alt="Hande Pehlivan — Klinik Psikolog"
+              fill
+              className="object-cover object-top"
+              priority
+              sizes="(max-width: 768px) 100vw, 440px"
+            />
           </div>
         </div>
       </div>
