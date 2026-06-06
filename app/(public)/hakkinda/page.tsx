@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const infoCards = [
   {
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
         <path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" />
       </svg>
     ),
@@ -19,7 +19,7 @@ const infoCards = [
   },
   {
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
         <path d="M9 11l3 3L22 4" /><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
       </svg>
     ),
@@ -28,7 +28,7 @@ const infoCards = [
   },
   {
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
         <circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" />
       </svg>
     ),
@@ -37,7 +37,7 @@ const infoCards = [
   },
   {
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
         <circle cx="12" cy="8" r="4" /><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
       </svg>
     ),
@@ -46,7 +46,7 @@ const infoCards = [
   },
   {
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
         <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
       </svg>
     ),
@@ -106,7 +106,7 @@ export default function HakkindaPage() {
           style={{ border: '1px solid rgba(184,150,126,0.10)' }} />
 
         <div className="relative z-10 max-w-[640px] mx-auto">
-          <p className="flex items-center justify-center gap-4 font-sans font-light text-[0.7rem] tracking-[0.3em] uppercase text-coffee-light mb-7">
+          <p className="flex items-center justify-center gap-4 font-sans font-light text-[0.85rem] tracking-[0.3em] uppercase text-coffee-light mb-7">
             <span className="block w-8 h-px bg-coffee-light/60" />
             Uzman Klinik Psikolog · Deneyimsel Oyun Terapisti
             <span className="block w-8 h-px bg-coffee-light/60" />
@@ -114,30 +114,30 @@ export default function HakkindaPage() {
           <h1 className="text-[clamp(2.6rem,5vw,3.8rem)] text-cream mb-6 leading-[1.1]">
             Hande <em className="italic text-coffee-light font-normal">Pehlivan</em>
           </h1>
-          <p className="text-[0.95rem] text-cream/70 max-w-md mx-auto leading-[1.95] font-sans">
+          <p className="text-[1.02rem] text-cream/70 max-w-md mx-auto leading-[1.95] font-sans">
             DEHB, anksiyete, depresyon ve çocuk-ergen psikolojisi alanlarında BDT ve Deneyimsel Oyun Terapisi ile çalışıyorum.
           </p>
         </div>
       </section>
 
       {/* Özgeçmiş — Prose Bio */}
-      <section className="bg-white py-20 px-8">
+      <section className="bg-white py-26 px-8">
         <div className="max-w-[800px] mx-auto">
           <RevealOnScroll>
-            <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-6">Özgeçmiş</span>
-            <p className="text-text-soft text-[0.93rem] leading-[2] mb-5 font-sans">
+            <span className="block font-sans font-light text-[0.9rem] tracking-[0.28em] uppercase text-coffee mb-6">Özgeçmiş</span>
+            <p className="text-text-soft text-[1rem] leading-[2] mb-5 font-sans">
               Klinik Psikolog Hande Pehlivan, lisans eğitimini Beykent Üniversitesi Psikoloji Bölümü&apos;nde (tam burslu) yüksek onur derecesiyle tamamladı. Lisans eğitimi süresince Bakırköy Mazhar Osman Ruh Sağlığı ve Sinir Hastalıkları Hastanesi (2016), Marmara Üniversitesi Pendik Eğitim ve Araştırma Hastanesi (2016) ve Kanuni Sultan Süleyman Eğitim ve Araştırma Hastanesi&apos;nde (2017) stajlar yaptı.
             </p>
-            <p className="text-text-soft text-[0.93rem] leading-[2] mb-5 font-sans">
+            <p className="text-text-soft text-[1rem] leading-[2] mb-5 font-sans">
               Ardından Hasan Kalyoncu Üniversitesi Klinik Psikoloji Yüksek Lisans programını tamamlayarak uzmanlık unvanını aldı. DEHB tanılı çocuk ve ergenlerin alt tiplerine göre CNS Vital Signs nöropsikolojik test bataryası sonuçlarını karşılaştıran tez çalışmasını yürüttü; aynı dönemde Prof. Dr. M. Hakan Türkçapar eğitiminde Bilişsel Davranışçı Terapi uzmanlık eğitimini tamamladı. Yüksek lisans sürecinde Şanlıurfa&apos;da Fizyo Hayat Sağlıklı Yaşam Merkezi&apos;nde depresyon, yaygın anksiyete ve travma vakalarında BDT uygulaması yaptı; HKÜ PDR Merkezi&apos;nde süpervizyon altında 60 oturumluk bireysel terapi gerçekleştirdi. İzmir&apos;de Prof. Dr. Eyüp Sabri Ercan Kliniği&apos;nde DEHB tanılı çocuk ve ergenlerle yürüttüğü staj ise tez çalışmasının veri toplama süreciyle iç içe geçti.
             </p>
-            <p className="text-text-soft text-[0.93rem] leading-[2] mb-5 font-sans">
+            <p className="text-text-soft text-[1rem] leading-[2] mb-5 font-sans">
               2018–2020 yılları arasında pedagojik formasyon eğitimini de tamamlayarak Bahçeşehir Koleji bünyesinde okul psikoloğu / psikolojik danışman olarak çalıştı; bireysel görüşmeler, ebeveyn destek programları, PASS teorisi temelli dikkat ve düşünme becerileri çalışmaları ve mindfulness uygulamaları yürüttü.
             </p>
-            <p className="text-text-soft text-[0.93rem] leading-[2] mb-5 font-sans">
+            <p className="text-text-soft text-[1rem] leading-[2] mb-5 font-sans">
               2020–2023 yılları arasında Madalyon Psikiyatri Merkezi&apos;nde çocuk ve ergenlerle çalıştı. Sınav kaygısı, yeme bozukluğu, anksiyete, depresyon ve OKB başta olmak üzere nevrotik bozukluklarda BDT ile çalıştı; 1. ve 2. Düzey Deneyimsel Oyun Terapisi eğitimlerini ve projektif test eğitimlerini tamamladı.
             </p>
-            <p className="text-text-soft text-[0.93rem] leading-[2] font-sans">
+            <p className="text-text-soft text-[1rem] leading-[2] font-sans">
               2024&apos;ten bu yana bireysel online terapi pratiğini sürdürmektedir.
             </p>
           </RevealOnScroll>
@@ -145,10 +145,10 @@ export default function HakkindaPage() {
       </section>
 
       {/* Info Kartlar */}
-      <section className="bg-cream py-20 px-8">
+      <section className="bg-cream py-26 px-8">
         <div className="max-w-[900px] mx-auto">
           <RevealOnScroll>
-            <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-10">Genel Bilgiler</span>
+            <span className="block font-sans font-light text-[0.9rem] tracking-[0.28em] uppercase text-coffee mb-10">Genel Bilgiler</span>
           </RevealOnScroll>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {infoCards.map(({ icon, title, desc }, i) => (
@@ -159,7 +159,7 @@ export default function HakkindaPage() {
                   </div>
                   <div>
                     <p className="font-serif text-[1.05rem] text-coffee-dark mb-1">{title}</p>
-                    <p className="text-[0.82rem] text-text-soft leading-[1.7] font-sans">{desc}</p>
+                    <p className="text-[0.9rem] text-text-soft leading-[1.7] font-sans">{desc}</p>
                   </div>
                 </div>
               </RevealOnScroll>
@@ -169,17 +169,17 @@ export default function HakkindaPage() {
       </section>
 
       {/* Sertifikalar & Eğitimler */}
-      <section className="bg-white py-20 px-8">
+      <section className="bg-white py-26 px-8">
         <div className="max-w-[800px] mx-auto">
           <RevealOnScroll>
-            <span className="block font-sans font-light text-[0.65rem] tracking-[0.28em] uppercase text-coffee mb-4">Nitelikler</span>
+            <span className="block font-sans font-light text-[0.9rem] tracking-[0.28em] uppercase text-coffee mb-4">Nitelikler</span>
             <h2 className="font-serif text-[1.9rem] text-coffee-dark mb-3">Sertifikalar ve Eğitimler</h2>
             <div className="w-10 h-px bg-coffee-light mb-10" />
           </RevealOnScroll>
           <RevealOnScroll direction="up">
             <ul className="flex flex-col gap-4">
               {certifications.map((c, i) => (
-                <li key={i} className="flex items-start gap-4 text-[0.88rem] text-text-soft leading-[1.7] font-sans">
+                <li key={i} className="flex items-start gap-4 text-[1.02rem] text-text-soft leading-[1.7] font-sans">
                   <span className="w-[5px] h-[5px] rounded-full bg-coffee flex-shrink-0 mt-[9px]" />
                   {c}
                 </li>
@@ -200,9 +200,9 @@ export default function HakkindaPage() {
                     <span className="w-[5px] h-[5px] rounded-full bg-coffee block" />
                   </div>
                   <div>
-                    <p className="text-[0.88rem] font-medium text-coffee-dark leading-[1.5] font-sans">{place}</p>
-                    <p className="text-[0.75rem] text-coffee/70 tracking-[0.06em] uppercase mb-1 font-sans">{period}</p>
-                    <p className="text-[0.85rem] text-text-soft leading-[1.75] font-sans">{desc}</p>
+                    <p className="text-[1.02rem] font-medium text-coffee-dark leading-[1.5] font-sans">{place}</p>
+                    <p className="text-[0.9rem] text-coffee/70 tracking-[0.06em] uppercase mb-1 font-sans">{period}</p>
+                    <p className="text-[1rem] text-text-soft leading-[1.75] font-sans">{desc}</p>
                   </div>
                 </div>
               </RevealOnScroll>
@@ -215,12 +215,12 @@ export default function HakkindaPage() {
       <section className="bg-coffee-dark py-22 px-8 text-center">
         <RevealOnScroll direction="scale">
           <h2 className="font-serif text-[2.2rem] text-cream mb-4">Bir adım atmak yeter.</h2>
-          <p className="text-[0.92rem] text-cream/70 max-w-[460px] mx-auto mb-10 font-sans">
+          <p className="text-[1rem] text-cream/70 max-w-[460px] mx-auto mb-10 font-sans">
             Kendiniz veya çocuğunuz için profesyonel destek almak istiyorsanız benimle iletişime geçmekten çekinmeyin.
           </p>
           <Link
             href="/iletisim"
-            className="bg-cream text-coffee-dark px-8 py-3 text-[0.78rem] tracking-[0.14em] uppercase font-sans hover:bg-beige transition-colors duration-300 no-underline inline-block"
+            className="bg-cream text-coffee-dark px-8 py-3 text-[0.85rem] tracking-[0.14em] uppercase font-sans hover:bg-beige transition-colors duration-300 no-underline inline-block"
           >
             İletişime Geç
           </Link>

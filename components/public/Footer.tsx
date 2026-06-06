@@ -16,8 +16,8 @@ export default function Footer({ settings }: { settings: Settings | null }) {
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-12 mb-12">
         <div>
           <span className="block font-serif text-[1.15rem] text-cream mb-0.5">Hande Pehlivan</span>
-          <span className="block text-[0.7rem] text-cream/50 tracking-[0.15em] uppercase">Klinik Psikolog</span>
-          <p className="text-[0.82rem] text-cream/45 leading-[1.8] mt-5">
+          <span className="block text-[0.78rem] text-cream/50 tracking-[0.15em] uppercase">Klinik Psikolog</span>
+          <p className="text-[0.9rem] text-cream/45 leading-[1.8] mt-5">
             DEHB, anksiyete, depresyon ve Deneyimsel Oyun Terapisi alanlarında bireysel terapi.
           </p>
           {(settings?.instagram_url || settings?.linkedin_url) && (
@@ -37,11 +37,11 @@ export default function Footer({ settings }: { settings: Settings | null }) {
         </div>
 
         <div>
-          <p className="text-[0.62rem] tracking-[0.22em] uppercase text-cream/50 mb-4">Sayfalar</p>
+          <p className="text-[0.72rem] tracking-[0.22em] uppercase text-cream/50 mb-4">Sayfalar</p>
           <ul className="list-none">
             {pages.map(({ href, label }) => (
               <li key={href} className="mb-2">
-                <Link href={href} className="text-cream/65 hover:text-cream text-[0.85rem] no-underline transition-opacity duration-200">
+                <Link href={href} className="text-cream/65 hover:text-cream text-[0.93rem] no-underline transition-opacity duration-200">
                   {label}
                 </Link>
               </li>
@@ -50,10 +50,10 @@ export default function Footer({ settings }: { settings: Settings | null }) {
         </div>
 
         <div>
-          <p className="text-[0.62rem] tracking-[0.22em] uppercase text-cream/50 mb-4">Uzmanlık</p>
+          <p className="text-[0.72rem] tracking-[0.22em] uppercase text-cream/50 mb-4">Uzmanlık</p>
           <ul className="list-none">
             {expertise.map(item => (
-              <li key={item} className="mb-2 text-cream/65 text-[0.85rem]">{item}</li>
+              <li key={item} className="mb-2 text-cream/65 text-[0.93rem]">{item}</li>
             ))}
           </ul>
         </div>

@@ -22,7 +22,7 @@ export default async function IletisimPage() {
           Merhaba,<br />
           <em className="italic text-coffee">nasıl yardımcı olabilirim?</em>
         </h1>
-        <p className="text-[0.88rem] text-text-soft leading-[1.95] mb-8">
+        <p className="text-[0.95rem] text-text-soft leading-[1.95] mb-8">
           Terapi süreci veya randevu talebi hakkında merak ettiğiniz konular varsa formu doldurabilir, doğrudan mail atabilir ya da WhatsApp üzerinden ulaşabilirsiniz.
         </p>
 
@@ -36,8 +36,8 @@ export default async function IletisimPage() {
                 </svg>
               </div>
               <div>
-                <strong className="block font-serif font-normal text-coffee-dark text-[0.9rem]">E-posta</strong>
-                <span className="text-[0.83rem] text-text-soft">{settings.contact_email}</span>
+                <strong className="block font-serif font-normal text-coffee-dark text-[0.97rem]">E-posta</strong>
+                <span className="text-[0.91rem] text-text-soft">{settings.contact_email}</span>
               </div>
             </div>
           )}
@@ -50,8 +50,8 @@ export default async function IletisimPage() {
                 </svg>
               </div>
               <div>
-                <strong className="block font-serif font-normal text-coffee-dark text-[0.9rem]">Telefon</strong>
-                <span className="text-[0.83rem] text-text-soft">{settings.contact_phone}</span>
+                <strong className="block font-serif font-normal text-coffee-dark text-[0.97rem]">Telefon</strong>
+                <span className="text-[0.91rem] text-text-soft">{settings.contact_phone}</span>
               </div>
             </div>
           )}
@@ -65,14 +65,14 @@ export default async function IletisimPage() {
                 </svg>
               </div>
               <div>
-                <strong className="block font-serif font-normal text-coffee-dark text-[0.9rem]">Adres</strong>
-                <span className="text-[0.83rem] text-text-soft">{settings.contact_address}</span>
+                <strong className="block font-serif font-normal text-coffee-dark text-[0.97rem]">Adres</strong>
+                <span className="text-[0.91rem] text-text-soft">{settings.contact_address}</span>
               </div>
             </div>
           )}
 
           {!settings?.contact_email && !settings?.contact_phone && !settings?.contact_address && (
-            <p className="text-[0.83rem] text-text-soft italic">İletişim bilgileri yakında eklenecektir.</p>
+            <p className="text-[0.91rem] text-text-soft italic">İletişim bilgileri yakında eklenecektir.</p>
           )}
         </div>
       </div>

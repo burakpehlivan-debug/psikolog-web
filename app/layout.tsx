@@ -4,14 +4,14 @@ import './globals.css'
 
 const cormorant = Cormorant_Garamond({
   variable: '--font-serif',
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
   weight: ['300', '400', '500'],
   style: ['normal', 'italic'],
 })
 
 const sourceSans = Source_Sans_3({
   variable: '--font-sans',
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
   weight: ['300', '400', '500'],
 })
 

@@ -18,7 +18,7 @@ export default async function PublicLayout({ children }: { children: React.React
 
   return (
     <>
-      <Navbar />
+      <Navbar settings={settings} />
       <main className="pt-[72px]">{children}</main>
       <Footer settings={settings} />
     </>

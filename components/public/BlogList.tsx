@@ -46,7 +46,7 @@ export default function BlogList({ posts }: { posts: Post[] }) {
       {/* Kategori filtresi */}
       {categories.length > 1 && (
         <div className="flex flex-wrap items-center gap-3 mb-14 justify-center">
-          <span className="hidden sm:block text-[0.6rem] tracking-[0.28em] uppercase text-coffee-light mr-3">Kategoriler</span>
+          <span className="hidden sm:block text-[0.76rem] tracking-[0.28em] uppercase text-coffee-light mr-3">Kategoriler</span>
           {categories.map(cat => {
             const count = cat === 'Tümü' ? posts.length : categoryCounts.get(cat) ?? 0
             const isActive = active === cat
@@ -54,7 +54,7 @@ export default function BlogList({ posts }: { posts: Post[] }) {
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
-                className={`group inline-flex items-center gap-2 px-5 py-2.5 text-[0.7rem] tracking-[0.18em] uppercase font-sans transition-all duration-300 cursor-pointer ${
+                className={`group inline-flex items-center gap-2 px-5 py-2.5 text-[0.78rem] tracking-[0.18em] uppercase font-sans transition-all duration-300 cursor-pointer ${
                   isActive
                     ? 'text-cream'
                     : 'bg-transparent text-text-soft border border-beige-mid hover:border-coffee hover:text-coffee-dark'
@@ -66,7 +66,7 @@ export default function BlogList({ posts }: { posts: Post[] }) {
                 } : {}}
               >
                 <span>{cat}</span>
-                <span className={`text-[0.6rem] tracking-normal px-1.5 py-0.5 rounded-full ${
+                <span className={`text-[0.76rem] tracking-normal px-1.5 py-0.5 rounded-full ${
                   isActive ? 'bg-cream/20 text-cream' : 'bg-beige text-coffee'
                 }`}>
                   {count}
@@ -108,21 +108,21 @@ export default function BlogList({ posts }: { posts: Post[] }) {
                 </div>
               )}
               {/* Sol üstte küçük badge */}
-              <div className="absolute top-5 left-5 bg-cream px-3 py-1.5 text-[0.58rem] tracking-[0.22em] uppercase text-coffee-dark">
+              <div className="absolute top-5 left-5 bg-cream px-3 py-1.5 text-[0.65rem] tracking-[0.22em] uppercase text-coffee-dark">
                 Öne Çıkan
               </div>
             </div>
 
             {/* Sağ — içerik */}
             <div className="p-10 md:p-12 flex flex-col justify-center">
-              <span className="block text-[0.62rem] tracking-[0.24em] uppercase text-coffee mb-4">{featured.category}</span>
+              <span className="block text-[0.72rem] tracking-[0.24em] uppercase text-coffee mb-4">{featured.category}</span>
               <h2 className="font-serif text-[clamp(1.5rem,2.4vw,1.95rem)] text-coffee-dark mb-4 leading-[1.25] group-hover:text-coffee transition-colors">
                 {featured.title}
               </h2>
-              <p className="text-[0.88rem] text-text-soft leading-[1.95] mb-6 line-clamp-3">
+              <p className="text-[0.95rem] text-text-soft leading-[1.95] mb-6 line-clamp-3">
                 {featured.excerpt}
               </p>
-              <div className="flex items-center gap-4 text-[0.7rem] text-coffee-light">
+              <div className="flex items-center gap-4 text-[0.78rem] text-coffee-light">
                 <span>{formatDate(featured.created_at)}</span>
                 <span className="block w-1 h-1 rounded-full bg-beige-mid" />
                 <span>{readingTime(featured.content)} dk okuma</span>
@@ -163,7 +163,7 @@ export default function BlogList({ posts }: { posts: Post[] }) {
                   </svg>
                 </div>
               )}
-              <div className="absolute top-4 left-4 bg-cream px-2.5 py-1 text-[0.55rem] tracking-[0.22em] uppercase text-coffee-dark">
+              <div className="absolute top-4 left-4 bg-cream px-2.5 py-1 text-[0.63rem] tracking-[0.22em] uppercase text-coffee-dark">
                 {post.category}
               </div>
             </div>
@@ -172,10 +172,10 @@ export default function BlogList({ posts }: { posts: Post[] }) {
               <h2 className="font-serif text-[1.25rem] text-coffee-dark mb-3 leading-[1.3] group-hover:text-coffee transition-colors">
                 {post.title}
               </h2>
-              <p className="text-[0.82rem] text-text-soft leading-[1.9] mb-5 line-clamp-3">
+              <p className="text-[0.9rem] text-text-soft leading-[1.9] mb-5 line-clamp-3">
                 {post.excerpt}
               </p>
-              <div className="flex items-center gap-3 text-[0.68rem] text-coffee-light pt-4 border-t border-beige">
+              <div className="flex items-center gap-3 text-[0.76rem] text-coffee-light pt-4 border-t border-beige">
                 <span>{formatDate(post.created_at)}</span>
                 <span className="block w-1 h-1 rounded-full bg-beige-mid" />
                 <span>{readingTime(post.content)} dk okuma</span>

@@ -192,7 +192,7 @@ export default function RandevuClient({ settings }: Props) {
       {/* Calendar grid */}
       {loading ? (
         <div className="border border-beige h-64 flex items-center justify-center">
-          <span className="text-[0.82rem] text-text-soft tracking-[0.1em]">Yükleniyor…</span>
+          <span className="text-[0.9rem] text-text-soft tracking-[0.1em]">Yükleniyor…</span>
         </div>
       ) : (
         <div className="grid grid-cols-7 border-t border-l border-beige">
@@ -210,15 +210,18 @@ export default function RandevuClient({ settings }: Props) {
             const clickable = !past && working && slots
 
             return (
-              <div
+              <button
                 key={i}
+                type="button"
                 onClick={() => handleDayClick(day)}
+                disabled={!clickable}
                 className={[
                   'border-r border-b border-beige h-12 md:h-14',
                   'flex items-center justify-center relative',
-                  'font-sans text-[0.82rem] transition-colors duration-150 select-none',
+                  'font-sans text-[0.9rem] transition-colors duration-150 select-none',
+                  'outline-none focus-visible:outline-1 focus-visible:outline-coffee',
                   clickable ? 'cursor-pointer hover:bg-beige' : 'cursor-default',
-                  isSelected ? 'bg-coffee-dark text-cream' : '',
+                  isSelected ? 'bg-coffee-dark text-cream' : 'bg-transparent',
                   !isSelected && clickable ? 'text-coffee-dark font-medium' : '',
                   !isSelected && !clickable ? 'text-text-soft/30' : '',
                 ].filter(Boolean).join(' ')}
@@ -227,7 +230,7 @@ export default function RandevuClient({ settings }: Props) {
                   <span className="absolute top-1.5 left-1/2 -translate-x-1/2 w-[5px] h-[5px] rounded-full bg-coffee-light" />
                 )}
                 {day}
-              </div>
+              </button>
             )
           })}
         </div>
@@ -235,27 +238,31 @@ export default function RandevuClient({ settings }: Props) {
 
       {/* API error notice */}
       {apiError && !loading && (
-        <p className="mt-4 text-[0.82rem] text-text-soft italic">
+        <p className="mt-4 text-[0.9rem] text-text-soft italic">
           Müsaitlik bilgileri yüklenemedi. Lütfen sayfayı yenileyin veya daha sonra tekrar deneyin.
         </p>
       )}
 
       {/* Legend */}
-      <div className="flex items-center gap-6 mt-5 text-[0.68rem] text-text-soft/70 font-sans">
-        <span className="flex items-center gap-1.5">
-          <span className="w-3 h-3 inline-block border border-beige-mid bg-cream" />
-          Müsait gün
+      <div className="flex items-center gap-6 mt-5 text-[0.76rem] text-text-soft/70 font-sans">
+        <span className="flex items-center gap-2">
+          <span className="w-5 h-5 inline-flex items-center justify-center border border-beige text-coffee-dark font-medium text-[0.75rem]">8</span>
+          Müsait
         </span>
-        <span className="flex items-center gap-1.5">
-          <span className="w-3 h-3 inline-block bg-coffee-dark" />
+        <span className="flex items-center gap-2">
+          <span className="w-5 h-5 inline-flex items-center justify-center bg-coffee-dark text-cream text-[0.75rem]">8</span>
           Seçili
+        </span>
+        <span className="flex items-center gap-2">
+          <span className="w-5 h-5 inline-flex items-center justify-center text-text-soft/30 text-[0.75rem]">8</span>
+          Müsait değil
         </span>
       </div>
 
       {/* Slots section */}
       {selectedDate && availability[selectedDate] && !loading && (
         <div id="slots-section" className="mt-16 pt-14 border-t border-beige">
-          <p className="text-[0.65rem] tracking-[0.2em] uppercase text-coffee mb-2 font-sans">Müsait Saatler</p>
+          <p className="text-[0.75rem] tracking-[0.2em] uppercase text-coffee mb-2 font-sans">Müsait Saatler</p>
           <h3 className="font-serif text-[1.25rem] text-coffee-dark mb-7">
             {formatDate(selectedDate)}
           </h3>
@@ -266,7 +273,7 @@ export default function RandevuClient({ settings }: Props) {
                 key={slot}
                 onClick={() => handleSlotClick(slot)}
                 className={[
-                  'px-7 py-2.5 text-[0.78rem] font-sans tracking-[0.1em] border transition-colors duration-200 cursor-pointer',
+                  'px-7 py-2.5 text-[0.85rem] font-sans tracking-[0.1em] border transition-colors duration-200 cursor-pointer',
                   selectedSlot === slot
                     ? 'bg-coffee-dark text-cream border-coffee-dark'
                     : 'bg-cream text-coffee-dark border-beige-mid hover:border-coffee hover:bg-beige',
@@ -282,71 +289,75 @@ export default function RandevuClient({ settings }: Props) {
       {/* Form section */}
       {selectedDate && selectedSlot && !success && (
         <div id="form-section" className="mt-14 pt-14 border-t border-beige">
-          <p className="text-[0.65rem] tracking-[0.2em] uppercase text-coffee mb-2 font-sans">Randevu Talebi</p>
+          <p className="text-[0.75rem] tracking-[0.2em] uppercase text-coffee mb-2 font-sans">Randevu Talebi</p>
           <h3 className="font-serif text-[1.25rem] text-coffee-dark mb-1">
             Bilgilerinizi Girin
           </h3>
-          <p className="text-[0.82rem] text-text-soft mb-8">
+          <p className="text-[0.9rem] text-text-soft mb-8">
             {formatDate(selectedDate)} — saat {selectedSlot}
           </p>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-5 max-w-[520px]">
             <div>
-              <label className="block text-[0.65rem] tracking-[0.18em] uppercase text-coffee mb-1.5">
+              <label htmlFor="appt-name" className="block text-[0.75rem] tracking-[0.18em] uppercase text-coffee mb-1.5">
                 Ad Soyad *
               </label>
               <input
+                id="appt-name"
                 required
                 type="text"
                 value={form.name}
                 onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
                 placeholder="Adınız ve soyadınız"
-                className="w-full px-3.5 py-2.5 border border-beige-mid bg-cream font-sans text-[0.88rem] text-text-main outline-none focus:border-coffee transition-colors"
+                className="w-full px-3.5 py-2.5 border border-beige-mid bg-cream font-sans text-[0.95rem] text-text-main outline-none focus:border-coffee transition-colors"
               />
             </div>
 
             <div>
-              <label className="block text-[0.65rem] tracking-[0.18em] uppercase text-coffee mb-1.5">
+              <label htmlFor="appt-phone" className="block text-[0.75rem] tracking-[0.18em] uppercase text-coffee mb-1.5">
                 Telefon *
               </label>
               <input
+                id="appt-phone"
                 required
                 type="tel"
                 value={form.phone}
                 onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
                 placeholder="05xx xxx xx xx"
-                className="w-full px-3.5 py-2.5 border border-beige-mid bg-cream font-sans text-[0.88rem] text-text-main outline-none focus:border-coffee transition-colors"
+                className="w-full px-3.5 py-2.5 border border-beige-mid bg-cream font-sans text-[0.95rem] text-text-main outline-none focus:border-coffee transition-colors"
               />
             </div>
 
             <div>
-              <label className="block text-[0.65rem] tracking-[0.18em] uppercase text-coffee mb-1.5">
+              <label htmlFor="appt-email" className="block text-[0.75rem] tracking-[0.18em] uppercase text-coffee mb-1.5">
                 E-posta <span className="normal-case tracking-normal opacity-60">(isteğe bağlı)</span>
               </label>
               <input
+                id="appt-email"
                 type="email"
                 value={form.email}
                 onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
                 placeholder="mail@ornek.com"
-                className="w-full px-3.5 py-2.5 border border-beige-mid bg-cream font-sans text-[0.88rem] text-text-main outline-none focus:border-coffee transition-colors"
+                className="w-full px-3.5 py-2.5 border border-beige-mid bg-cream font-sans text-[0.95rem] text-text-main outline-none focus:border-coffee transition-colors"
               />
             </div>
 
             <div>
-              <label className="block text-[0.65rem] tracking-[0.18em] uppercase text-coffee mb-1.5">
+              <label htmlFor="appt-note" className="block text-[0.75rem] tracking-[0.18em] uppercase text-coffee mb-1.5">
                 Notunuz <span className="normal-case tracking-normal opacity-60">(isteğe bağlı)</span>
               </label>
               <textarea
+                id="appt-note"
                 value={form.note}
                 onChange={e => setForm(f => ({ ...f, note: e.target.value }))}
                 placeholder="Görüşmek istediğiniz konu veya başka bilgi…"
                 rows={4}
-                className="w-full px-3.5 py-2.5 border border-beige-mid bg-cream font-sans text-[0.88rem] text-text-main outline-none focus:border-coffee transition-colors resize-y"
+                className="w-full px-3.5 py-2.5 border border-beige-mid bg-cream font-sans text-[0.95rem] text-text-main outline-none focus:border-coffee transition-colors resize-y"
               />
             </div>
 
             {error && (
-              <p className="text-[0.83rem] text-red-700 bg-red-50 px-4 py-3 border border-red-200">
+              <p role="alert" className="text-[0.83rem] text-coffee-dark bg-beige px-4 py-3 border border-beige-mid italic">
                 {error}
               </p>
             )}
@@ -354,7 +365,7 @@ export default function RandevuClient({ settings }: Props) {
             <button
               type="submit"
               disabled={submitting}
-              className="w-full bg-coffee-dark text-cream py-3.5 text-[0.78rem] tracking-[0.14em] uppercase font-sans hover:bg-coffee transition-colors duration-300 cursor-pointer border-0 disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full bg-coffee-dark text-cream py-3.5 text-[0.85rem] tracking-[0.14em] uppercase font-sans hover:bg-coffee transition-colors duration-300 cursor-pointer border-0 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {submitting ? 'Gönderiliyor…' : 'Randevu Talebini Gönder'}
             </button>
@@ -364,13 +375,13 @@ export default function RandevuClient({ settings }: Props) {
 
       {/* Success */}
       {success && (
-        <div id="form-section" className="mt-14 pt-14 border-t border-beige">
+        <div id="form-section" aria-live="polite" className="mt-14 pt-14 border-t border-beige">
           <div className="bg-beige px-8 py-10 max-w-[520px]">
             <div className="w-10 h-px bg-coffee-light mb-6" />
             <h3 className="font-serif text-[1.25rem] text-coffee-dark mb-3">
               Talebiniz Alındı
             </h3>
-            <p className="text-[0.88rem] text-text-soft leading-[1.9]">
+            <p className="text-[0.95rem] text-text-soft leading-[1.9]">
               Randevu talebiniz başarıyla iletildi. Telefon numaranız üzerinden en kısa
               sürede sizinle iletişime geçilecektir.
             </p>

@@ -53,7 +53,7 @@ export default async function BlogPage() {
         />
 
         <div className="relative z-10 max-w-[640px] mx-auto">
-          <p className="flex items-center justify-center gap-4 font-sans font-light text-[0.7rem] tracking-[0.3em] uppercase text-coffee-light mb-7">
+          <p className="flex items-center justify-center gap-4 font-sans font-light text-[0.78rem] tracking-[0.3em] uppercase text-coffee-light mb-7">
             <span className="block w-8 h-px bg-coffee-light/60" />
             Hande Pehlivan
             <span className="block w-8 h-px bg-coffee-light/60" />
@@ -61,11 +61,11 @@ export default async function BlogPage() {
           <h1 className="text-[clamp(2.8rem,5vw,4rem)] text-cream mb-6 leading-[1.1]">
             Düşünceler &amp; <em className="italic text-coffee-light font-normal">Notlar</em>
           </h1>
-          <p className="text-[0.95rem] text-cream/70 max-w-md mx-auto leading-[1.95]">
+          <p className="text-[1.02rem] text-cream/70 max-w-md mx-auto leading-[1.95]">
             Çocuk ve ergen psikolojisi, ebeveynlik ve terapi süreçleri üzerine yazılar.
           </p>
           {posts.length > 0 && (
-            <div className="mt-10 flex items-center justify-center gap-3 text-[0.65rem] tracking-[0.22em] uppercase text-cream/50">
+            <div className="mt-10 flex items-center justify-center gap-3 text-[0.75rem] tracking-[0.22em] uppercase text-cream/50">
               <span className="block w-6 h-px bg-cream/30" />
               <span>{posts.length} Yazı</span>
               <span className="block w-6 h-px bg-cream/30" />

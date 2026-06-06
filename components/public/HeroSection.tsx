@@ -21,7 +21,7 @@ export default function HeroSection() {
 
       <div className="max-w-[1200px] mx-auto px-8 py-20 grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10 w-full">
         <div>
-          <p className="flex items-center gap-4 font-sans font-light text-[0.7rem] tracking-[0.28em] uppercase text-coffee mb-7">
+          <p className="flex items-center gap-4 font-sans font-light text-[0.85rem] tracking-[0.28em] uppercase text-coffee mb-7">
             <span className="block w-8 h-px bg-coffee-light" />
             Klinik Psikoloji · Online Terapi
           </p>
@@ -30,19 +30,19 @@ export default function HeroSection() {
             bazen <em className="italic text-coffee">desteğe</em><br />
             ihtiyaç duyar.
           </h1>
-          <p className="text-[0.95rem] text-text-soft max-w-[400px] leading-[2] mb-11">
+          <p className="text-[1.02rem] text-text-soft max-w-[400px] leading-[2] mb-11">
             Anksiyete, depresyon, sınav kaygısı ve daha fazlası için güvenli bir terapi alanı oluşturmak üzere buradayım.
           </p>
           <div className="flex gap-4 flex-wrap">
             <Link
               href="/randevu"
-              className="bg-coffee-dark text-cream px-8 py-3 text-[0.78rem] tracking-[0.14em] uppercase font-sans hover:bg-coffee transition-colors duration-300 no-underline"
+              className="bg-coffee-dark text-cream px-8 py-3 text-[0.85rem] tracking-[0.14em] uppercase font-sans hover:bg-coffee transition-colors duration-300 no-underline"
             >
               Randevu Talep Et
             </Link>
             <Link
               href="/blog"
-              className="bg-transparent text-coffee-dark px-8 py-3 border border-coffee-dark text-[0.78rem] tracking-[0.14em] uppercase font-sans hover:bg-coffee-dark hover:text-cream transition-all duration-300 no-underline"
+              className="bg-transparent text-coffee-dark px-8 py-3 border border-coffee-dark text-[0.85rem] tracking-[0.14em] uppercase font-sans hover:bg-coffee-dark hover:text-cream transition-all duration-300 no-underline"
             >
               Blog&apos;u Keşfet
             </Link>
@@ -56,7 +56,7 @@ export default function HeroSection() {
           />
           <div className="relative z-10 w-full aspect-[3/4] bg-beige flex items-center justify-center overflow-hidden">
             <div className="text-center text-coffee font-display italic">
-              <svg className="w-12 h-12 opacity-30 mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+              <svg aria-hidden="true" className="w-12 h-12 opacity-30 mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
                 <rect x="3" y="3" width="18" height="18" rx="2" />
                 <circle cx="8.5" cy="8.5" r="1.5" />
                 <polyline points="21 15 16 10 5 21" />
@@ -68,7 +68,7 @@ export default function HeroSection() {
       </div>
 
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-coffee text-[0.62rem] tracking-[0.2em] uppercase animate-bounce">
-        <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <svg aria-hidden="true" className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M12 5v14M5 12l7 7 7-7" />
         </svg>
       </div>
