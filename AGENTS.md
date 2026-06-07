@@ -1,3 +1,7 @@
+# Deploy kuralı — GÖRSEL DEĞİŞİKLİKLERDE ONAY ZORUNLU
+
+Görsel/tasarım etkisi olan hiçbir değişikliği (logo, renk, font, layout, bileşen görünümü, metin dahil arayüzde görünen her şey) kullanıcı **açıkça onaylamadan** commit edip deploy ETME (`git push` etme). Önce değişikliği preview'da göster, onay bekle, sonra deploy et. Onay verilmeden push yok.
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
