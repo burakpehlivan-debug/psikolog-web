@@ -6,9 +6,11 @@ async function getResend() {
 
 function formatDT(iso: string) {
   const d = new Date(iso)
+  // Vercel sunucusu UTC'de çalışır — Turkey saatini (UTC+3, DST yok) açıkça hesapla
+  const tr = new Date(d.getTime() + 3 * 60 * 60 * 1000)
   const days = ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi']
   const months = ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık']
-  return `${days[d.getDay()]}, ${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()} — ${d.getHours().toString().padStart(2,'0')}:${d.getMinutes().toString().padStart(2,'0')}`
+  return `${days[tr.getUTCDay()]}, ${tr.getUTCDate()} ${months[tr.getUTCMonth()]} ${tr.getUTCFullYear()} — ${String(tr.getUTCHours()).padStart(2,'0')}:${String(tr.getUTCMinutes()).padStart(2,'0')}`
 }
 
 interface AppointmentEmailData {

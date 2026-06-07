@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import type { Settings } from '@/lib/types'
 
 const TR_MONTHS = [
@@ -36,7 +36,8 @@ export default function RandevuClient({ settings }: Props) {
   const [loading, setLoading] = useState(true)
   const [selectedDate, setSelectedDate] = useState<string | null>(null)
   const [selectedSlot, setSelectedSlot] = useState<string | null>(null)
-  const [form, setForm] = useState({ name: '', phone: '', email: '', note: '' })
+  const [form, setForm] = useState({ name: '', phone: '', email: '', note: '', website: '' })
+  const formLoadTime = useRef<number>(0)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
@@ -111,6 +112,7 @@ export default function RandevuClient({ settings }: Props) {
     setSelectedSlot(slot)
     setError(null)
     setSuccess(false)
+    formLoadTime.current = Date.now()
     setTimeout(() => {
       document.getElementById('form-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }, 50)
@@ -139,11 +141,13 @@ export default function RandevuClient({ settings }: Props) {
           note: form.note || null,
           start_datetime,
           end_datetime,
+          _hp: form.website,
+          _t: formLoadTime.current,
         }),
       })
       if (res.ok) {
         setSuccess(true)
-        setForm({ name: '', phone: '', email: '', note: '' })
+        setForm({ name: '', phone: '', email: '', note: '', website: '' })
       } else {
         const data = await res.json()
         setError(data.error ?? 'Bir hata oluştu')
@@ -298,6 +302,17 @@ export default function RandevuClient({ settings }: Props) {
           </p>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-5 max-w-[520px]">
+            {/* Honeypot — botlar için, kullanıcılar görmemeli */}
+            <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
+              <input
+                type="text"
+                name="website"
+                value={form.website}
+                onChange={e => setForm(f => ({ ...f, website: e.target.value }))}
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
             <div>
               <label htmlFor="appt-name" className="block text-[0.75rem] tracking-[0.18em] uppercase text-coffee mb-1.5">
                 Ad Soyad *
