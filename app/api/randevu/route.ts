@@ -120,14 +120,14 @@ export async function POST(request: NextRequest) {
   const elapsed = rateLimit
     ? Date.now() - new Date(rateLimit.last_attempt).getTime()
     : RATE_WINDOW_MS + 1
-  supabase.from('rate_limits').upsert(
+  void supabase.from('rate_limits').upsert(
     {
       ip,
       last_attempt: new Date().toISOString(),
       attempt_count: elapsed < RATE_WINDOW_MS ? (rateLimit?.attempt_count ?? 0) + 1 : 1,
     },
     { onConflict: 'ip' }
-  ).then(() => {}).catch(() => {})
+  ).then(() => {}, () => {})
 
   sendNewAppointmentEmail({ name, phone, email, note, start_datetime, end_datetime }).catch(
     (err) => console.error('Email gönderilemedi:', err)
