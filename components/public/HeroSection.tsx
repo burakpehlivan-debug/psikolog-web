@@ -24,15 +24,15 @@ export default function HeroSection() {
         <div>
           <p className="flex items-center gap-4 font-sans font-light text-[0.85rem] tracking-[0.28em] uppercase text-coffee mb-7">
             <span className="block w-8 h-px bg-coffee-light" />
-            Klinik Psikoloji · Online Terapi
+            Klinik Psikolog · ONLINE Terapi
           </p>
-          <h1 className="text-[clamp(2.6rem,4.8vw,4rem)] text-coffee-dark mb-7 leading-[1.14]">
+          <h1 className="text-[clamp(2.9rem,5.2vw,4.5rem)] text-coffee-dark mb-7 leading-[1.14]">
             Değişim<br />
             bazen <em className="italic text-coffee">desteğe</em><br />
             ihtiyaç duyar.
           </h1>
           <p className="text-[1.02rem] text-text-soft max-w-[400px] leading-[2] mb-11">
-            Anksiyete, depresyon, sınav kaygısı ve daha fazlası için güvenli bir terapi alanı oluşturmak üzere buradayım.
+            Dikkat eksikliği ve hiperaktivite, depresyon, ayrılık kaygısı, sosyal fobi, yaygın kaygı, sınav kaygısı, travma sonrası stres ve takıntı alanlarında güvenli bir terapi ortamı oluşturmak için buradayım.
           </p>
           <div className="flex gap-4 flex-wrap">
             <Link

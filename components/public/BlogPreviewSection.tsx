@@ -16,7 +16,7 @@ export default function BlogPreviewSection({ posts }: { posts: Post[] }) {
       <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-16">
           <span className="block font-sans font-light text-[0.75rem] tracking-[0.28em] uppercase text-coffee mb-4">Blog</span>
-          <h2 className="text-[clamp(1.8rem,3.2vw,2.8rem)] text-coffee-dark">Son Yazılar</h2>
+          <h2 className="text-[clamp(2rem,3.5vw,3.1rem)] text-coffee-dark">Son Yazılar</h2>
           <div className="w-11 h-px bg-coffee-light mx-auto mt-6" />
         </div>
 

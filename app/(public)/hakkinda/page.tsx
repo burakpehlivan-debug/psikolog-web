@@ -33,7 +33,7 @@ const infoCards = [
       </svg>
     ),
     title: 'Terapi Yaklaşımları',
-    desc: 'Bilişsel Davranışçı Terapi (BDT) · Deneyimsel Oyun Terapisi (2. Düzey DOT)',
+    desc: 'Bilişsel Davranışçı Terapi · Deneyimsel Oyun Terapisi',
   },
   {
     icon: (
@@ -51,7 +51,7 @@ const infoCards = [
       </svg>
     ),
     title: 'Çalışma Biçimi',
-    desc: 'Online terapi (BDT seansları) · Yüz yüze (Deneyimsel Oyun Terapisi seansları)',
+    desc: 'Online terapi · Yüz yüze',
   },
 ]
 

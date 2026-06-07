@@ -39,7 +39,7 @@ export default function AboutSection() {
         {/* İçerik */}
         <div className="md:pt-0 pt-16">
           <span className="block font-sans font-light text-[0.75rem] tracking-[0.28em] uppercase text-coffee mb-4">Terapistini Tanı</span>
-          <h2 className="text-[2.1rem] text-coffee-dark mb-6">Hande Pehlivan</h2>
+          <h2 className="text-[2.4rem] text-coffee-dark mb-6">Hande Pehlivan</h2>
           <p className="text-text-soft text-[1rem] mb-5">
             Klinik Psikolog olarak DEHB, anksiyete, depresyon, sınav kaygısı, yeme bozuklukları ve travma alanlarında genç yetişkinler, çocuklar ve ergenlerle çalışıyorum. Danışanlarımın kendilerini güvende ve anlaşılmış hissedebilecekleri bir terapi ortamı yaratmak önceliğim.
           </p>

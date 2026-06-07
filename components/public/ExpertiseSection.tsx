@@ -49,6 +49,25 @@ const cards = [
     ),
     featured: false,
   },
+  {
+    title: 'Yürütücü İşlevler',
+    subtitle: null,
+    desc: 'Planlama, odaklanma, talimatları hatırlama ve çoklu görevleri yönetme gibi üst düzey bilişsel beceriler.',
+    icon: (
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="52" height="52">
+        <circle cx="12" cy="3.5" r="2" />
+        <line x1="12" y1="5.5" x2="12" y2="8" />
+        <line x1="5" y1="8" x2="19" y2="8" />
+        <line x1="5" y1="8" x2="5" y2="12" />
+        <line x1="12" y1="8" x2="12" y2="12" />
+        <line x1="19" y1="8" x2="19" y2="12" />
+        <circle cx="5" cy="14" r="2" />
+        <circle cx="12" cy="14" r="2" />
+        <circle cx="19" cy="14" r="2" />
+      </svg>
+    ),
+    featured: false,
+  },
 ]
 
 export default function ExpertiseSection() {
@@ -58,7 +77,7 @@ export default function ExpertiseSection() {
         <RevealOnScroll>
           <div className="text-center mb-16">
             <span className="block font-sans font-light text-[0.75rem] tracking-[0.28em] uppercase text-coffee mb-4">Uzmanlık Alanlarım</span>
-            <h2 className="text-[clamp(1.8rem,3.2vw,2.8rem)] text-coffee-dark">Ne Konularda Çalışıyorum?</h2>
+            <h2 className="text-[clamp(2rem,3.5vw,3.1rem)] text-coffee-dark">Hangi Konularda Çalışıyorum?</h2>
             <div className="w-11 h-px bg-coffee-light mx-auto mt-6" />
           </div>
         </RevealOnScroll>
