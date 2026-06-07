@@ -40,18 +40,18 @@ export default function Navbar({ settings }: { settings: Settings | null }) {
           <Link href="/" className="cursor-pointer flex items-center gap-3">
             <svg
               aria-hidden="true"
-              viewBox="0 0 55 138"
-              width="19"
-              height="49"
+              viewBox="0 0 113 237.7"
+              width="24"
+              height="50"
               fill="none"
               stroke="currentColor"
-              strokeWidth="4"
+              strokeWidth="5"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="text-coffee-dark flex-shrink-0"
             >
-              <circle cx="25" cy="5" r="3" fill="currentColor" stroke="none"/>
-              <path d="M 25 9 L 25 38 C 25 42 39 44 39 51 C 39 58 25 58 25 58 C 25 58 11 58 11 66 C 11 74 25 74 25 74 C 25 74 41 74 41 83 C 41 92 25 92 25 92 C 35 92 48 102 48 114 C 48 126 34 133 21 130 C 8 127 6 113 13 104 C 20 95 33 94 37 104 C 41 114 33 120 26 118" />
+              <circle cx="56.5" cy="6.5" r="5" fill="currentColor" stroke="none"/>
+              <path d="M56.5 16.5C53.5 30.5 60.5 44.5 56.5 54.5M56.5 70.5C74.0 48.0 104.0 58.0 106.5 70.5C104.0 83.0 74.0 93.0 56.5 70.5C39.0 48.0 9.0 58.0 6.5 70.5C9.0 83.0 39.0 93.0 56.5 70.5M56.5 100.5C74.0 78.0 104.0 88.0 106.5 100.5C104.0 113.0 74.0 123.0 56.5 100.5C39.0 78.0 9.0 88.0 6.5 100.5C9.0 113.0 39.0 123.0 56.5 100.5M56.5 100.5C56.5 126.5 100.5 162.5 100.5 192.5L99.0 200.9L96.0 208.7L91.6 215.7L86.0 221.5L79.4 226.1L72.2 229.3L64.7 231.0L57.1 231.2L49.7 230.0L42.8 227.3L36.7 223.5L31.6 218.6L27.5 212.9L24.7 206.6L23.2 200.1L23.1 193.5L24.1 187.1L26.4 181.2L29.7 175.9L33.9 171.5L38.8 168.1L44.1 165.7L49.7 164.5L55.2 164.3L60.6 165.3L65.6 167.2L69.9 170.0L73.6 173.5L76.4 177.6L78.3 182.0L79.3 186.6L79.4 191.1L78.6 195.5L76.9 199.5L74.6 203.0L71.8 205.8L68.5 208.0L65.0 209.5L61.4 210.1L57.8 210.1L54.5 209.4L51.5 208.0L48.9 206.2L46.8 204.0L45.3 201.5L44.3 198.8L44.0 196.2L44.2 193.6L44.8 191.3L45.9 189.2L47.3 187.6L49.0 186.3L50.7 185.5L52.5 185.1L54.2 185.1L55.8 185.4L57.1 186.1L58.1 186.9L58.9 187.9L59.3 189.0L59.4 190.0L59.3 191.0L58.9 191.7" />
             </svg>
             <div>
               <span className="block font-serif text-[1.43rem] leading-none text-coffee-dark">Hande Pehlivan</span>
