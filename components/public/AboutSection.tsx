@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import RevealOnScroll from '@/components/ui/RevealOnScroll'
 
 const credentials = [
@@ -14,19 +15,19 @@ export default function AboutSection() {
         <RevealOnScroll direction="left">
         {/* Fotoğraf */}
         <div className="relative">
-          <div className="relative w-full max-w-[380px] aspect-[4/5] bg-beige flex items-center justify-center mx-auto">
+          <div className="relative w-full max-w-[380px] aspect-[4/5] bg-beige mx-auto overflow-hidden">
+            <Image
+              src="https://rhknksjslrvlrpewazhe.supabase.co/storage/v1/object/public/blog-images/IMG_1843.jpeg"
+              alt="Klinik Psikolog Hande Pehlivan"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 768px) 100vw, 380px"
+            />
             <div
-              className="absolute bottom-[-22px] right-[-22px] w-[72%] h-[72%] -z-10"
+              className="absolute bottom-[-22px] right-[-22px] w-[72%] h-[72%] -z-10 pointer-events-none"
               style={{ border: '1px solid var(--color-beige-mid)' }}
             />
-            <div className="text-center text-coffee font-display italic">
-              <svg aria-hidden="true" className="w-10 h-10 opacity-30 mx-auto mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <circle cx="8.5" cy="8.5" r="1.5" />
-                <polyline points="21 15 16 10 5 21" />
-              </svg>
-              <p className="text-[0.85rem] opacity-45">Fotoğraf eklenecek</p>
-            </div>
           </div>
           <div className="absolute bottom-[-2.5rem] left-[-2rem] bg-coffee-dark text-cream px-7 py-6 max-w-[210px] z-10 font-display italic text-[1rem] leading-[1.65]">
             &ldquo;Anlamlı değişim, doğru ortamda mümkündür.&rdquo;
