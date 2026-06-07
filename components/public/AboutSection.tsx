@@ -29,8 +29,8 @@ export default function AboutSection() {
               style={{ border: '1px solid var(--color-beige-mid)' }}
             />
           </div>
-          <div className="absolute bottom-[-2.5rem] left-[-2rem] bg-coffee-dark text-cream px-7 py-6 max-w-[210px] z-10 font-display italic text-[1rem] leading-[1.65]">
-            &ldquo;Anlamlı değişim, doğru ortamda mümkündür.&rdquo;
+          <div className="absolute bottom-[-2.5rem] left-[-2rem] bg-coffee-dark text-cream px-7 py-6 max-w-[250px] z-10 font-display italic text-[1rem] leading-[1.65]">
+            &ldquo;Her davranışın ardında anlaşılmayı bekleyen bir hikaye vardır.&rdquo;
           </div>
         </div>
         </RevealOnScroll>
