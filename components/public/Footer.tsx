@@ -61,9 +61,14 @@ export default function Footer({ settings }: { settings: Settings | null }) {
 
       <div className="max-w-[1200px] mx-auto pt-8 border-t border-white/10 flex justify-between items-center text-[0.72rem] text-cream/40">
         <span>© {new Date().getFullYear()} Hande Pehlivan. Tüm hakları saklıdır.</span>
-        <Link href="/admin" className="text-cream/30 hover:text-cream/60 no-underline transition-colors text-[0.65rem]">
-          Yönetim
-        </Link>
+        <div className="flex items-center gap-5">
+          <Link href="/kvkk" className="text-cream/40 hover:text-cream/70 no-underline transition-colors">
+            KVKK
+          </Link>
+          <Link href="/admin" className="text-cream/30 hover:text-cream/60 no-underline transition-colors text-[0.65rem]">
+            Yönetim
+          </Link>
+        </div>
       </div>
     </footer>
   )

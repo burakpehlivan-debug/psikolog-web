@@ -1,12 +1,14 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function ContactForm({ email }: { email: string | null }) {
   const [name, setName] = useState('')
   const [userEmail, setUserEmail] = useState('')
   const [msg, setMsg] = useState('')
   const [sent, setSent] = useState(false)
+  const [kvkkConsent, setKvkkConsent] = useState(false)
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -58,9 +60,26 @@ export default function ContactForm({ email }: { email: string | null }) {
               className="w-full px-3.5 py-2.5 border border-beige-mid bg-cream font-sans text-[0.95rem] text-text-main outline-none focus:border-coffee transition-colors resize-y"
             />
           </div>
+          <label className="flex items-start gap-3 cursor-pointer">
+            <input
+              type="checkbox"
+              required
+              checked={kvkkConsent}
+              onChange={e => setKvkkConsent(e.target.checked)}
+              className="mt-[3px] w-4 h-4 accent-coffee-dark flex-shrink-0 cursor-pointer"
+            />
+            <span className="text-[0.83rem] text-text-soft leading-[1.7]">
+              Kişisel verilerimin işlenmesine ilişkin{' '}
+              <Link href="/kvkk" target="_blank" className="text-coffee underline underline-offset-2 hover:text-coffee-dark transition-colors">
+                Aydınlatma Metni'ni
+              </Link>{' '}
+              okudum, anladım.
+            </span>
+          </label>
           <button
             type="submit"
-            className="w-full bg-coffee-dark text-cream py-3 text-[0.85rem] tracking-[0.14em] uppercase font-sans hover:bg-coffee transition-colors duration-300 cursor-pointer border-0"
+            disabled={!kvkkConsent}
+            className="w-full bg-coffee-dark text-cream py-3 text-[0.85rem] tracking-[0.14em] uppercase font-sans hover:bg-coffee transition-colors duration-300 cursor-pointer border-0 disabled:opacity-60 disabled:cursor-not-allowed"
           >
             Gönder
           </button>

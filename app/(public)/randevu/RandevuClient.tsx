@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Link from 'next/link'
 import type { Settings } from '@/lib/types'
 
 const TR_MONTHS = [
@@ -41,6 +42,7 @@ export default function RandevuClient({ settings }: Props) {
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
+  const [kvkkConsent, setKvkkConsent] = useState(false)
 
   useEffect(() => {
     setLoading(true)
@@ -377,9 +379,26 @@ export default function RandevuClient({ settings }: Props) {
               </p>
             )}
 
+            <label className="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                required
+                checked={kvkkConsent}
+                onChange={e => setKvkkConsent(e.target.checked)}
+                className="mt-[3px] w-4 h-4 accent-coffee-dark flex-shrink-0 cursor-pointer"
+              />
+              <span className="text-[0.83rem] text-text-soft leading-[1.7]">
+                Kişisel verilerimin işlenmesine ilişkin{' '}
+                <Link href="/kvkk" target="_blank" className="text-coffee underline underline-offset-2 hover:text-coffee-dark transition-colors">
+                  Aydınlatma Metni'ni
+                </Link>{' '}
+                okudum, anladım.
+              </span>
+            </label>
+
             <button
               type="submit"
-              disabled={submitting}
+              disabled={submitting || !kvkkConsent}
               className="w-full bg-coffee-dark text-cream py-3.5 text-[0.85rem] tracking-[0.14em] uppercase font-sans hover:bg-coffee transition-colors duration-300 cursor-pointer border-0 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {submitting ? 'Gönderiliyor…' : 'Randevu Talebini Gönder'}
