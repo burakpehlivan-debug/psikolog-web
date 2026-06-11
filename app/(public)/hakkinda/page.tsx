@@ -1,10 +1,34 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import RevealOnScroll from '@/components/ui/RevealOnScroll'
+import JsonLd from '@/components/JsonLd'
+import { createClient } from '@/lib/supabase/server'
+import type { Settings } from '@/lib/types'
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, PROFILE_IMAGE } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Hakkında | Hande Pehlivan',
+  title: 'Hakkında',
   description: 'Klinik Psikolog ve Deneyimsel Oyun Terapisti Hande Pehlivan hakkında — uzmanlık alanları, eğitim ve terapi yaklaşımı.',
+  alternates: { canonical: '/hakkinda' },
+  openGraph: {
+    type: 'website',
+    locale: 'tr_TR',
+    siteName: SITE_NAME,
+    title: 'Hakkında | Hande Pehlivan',
+    description: 'Klinik Psikolog ve Deneyimsel Oyun Terapisti Hande Pehlivan hakkında — uzmanlık alanları, eğitim ve terapi yaklaşımı.',
+    url: '/hakkinda',
+    images: [PROFILE_IMAGE],
+  },
+}
+
+async function getSettings(): Promise<Settings | null> {
+  try {
+    const supabase = await createClient()
+    const { data } = await supabase.from('settings').select('*').eq('id', 1).single()
+    return data
+  } catch {
+    return null
+  }
 }
 
 const infoCards = [
@@ -88,9 +112,36 @@ const internships = [
   },
 ]
 
-export default function HakkindaPage() {
+export default async function HakkindaPage() {
+  const settings = await getSettings()
+
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: SITE_NAME,
+    jobTitle: 'Klinik Psikolog',
+    description: SITE_DESCRIPTION,
+    image: PROFILE_IMAGE,
+    url: `${SITE_URL}/hakkinda`,
+    alumniOf: [
+      { '@type': 'CollegeOrUniversity', name: 'Beykent Üniversitesi' },
+      { '@type': 'CollegeOrUniversity', name: 'Hasan Kalyoncu Üniversitesi' },
+    ],
+    knowsAbout: [
+      'Bilişsel Davranışçı Terapi',
+      'Deneyimsel Oyun Terapisi',
+      'Çocuk ve Ergen Psikolojisi',
+      'DEHB',
+      'Anksiyete',
+      'Depresyon',
+    ],
+    memberOf: { '@type': 'Organization', name: 'Türk Psikologlar Derneği' },
+    sameAs: [settings?.instagram_url, settings?.linkedin_url].filter(Boolean),
+  }
+
   return (
     <>
+      <JsonLd data={personSchema} />
       {/* Banner */}
       <section className="bg-coffee-dark px-8 py-36 md:py-44 text-center relative overflow-hidden">
         <div

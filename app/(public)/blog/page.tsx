@@ -6,8 +6,9 @@ import type { Metadata } from 'next'
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: 'Blog | Hande Pehlivan',
+  title: 'Blog',
   description: 'Çocuk ve ergen psikolojisi üzerine yazılar.',
+  alternates: { canonical: '/blog' },
 }
 
 async function getPosts(): Promise<Post[]> {

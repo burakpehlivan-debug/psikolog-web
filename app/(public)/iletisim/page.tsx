@@ -1,6 +1,24 @@
+import type { Metadata } from 'next'
 import { createClient } from '@/lib/supabase/server'
 import type { Settings } from '@/lib/types'
 import ContactForm from '@/components/public/ContactForm'
+import JsonLd from '@/components/JsonLd'
+import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESCRIPTION, PROFILE_IMAGE } from '@/lib/site'
+
+export const metadata: Metadata = {
+  title: 'İletişim',
+  description: 'Hande Pehlivan ile iletişime geçin — randevu talebi, e-posta veya WhatsApp üzerinden ulaşabilirsiniz.',
+  alternates: { canonical: '/iletisim' },
+  openGraph: {
+    type: 'website',
+    locale: 'tr_TR',
+    siteName: SITE_NAME,
+    title: 'İletişim | Hande Pehlivan',
+    description: 'Hande Pehlivan ile iletişime geçin — randevu talebi, e-posta veya WhatsApp üzerinden ulaşabilirsiniz.',
+    url: '/iletisim',
+    images: [PROFILE_IMAGE],
+  },
+}
 
 async function getSettings(): Promise<Settings | null> {
   try {
@@ -15,8 +33,26 @@ async function getSettings(): Promise<Settings | null> {
 export default async function IletisimPage() {
   const settings = await getSettings()
 
+  const businessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    image: PROFILE_IMAGE,
+    url: `${SITE_URL}/iletisim`,
+    areaServed: { '@type': 'Country', name: 'Türkiye' },
+    serviceType: 'Psikoterapi',
+    ...(settings?.contact_email ? { email: settings.contact_email } : {}),
+    ...(settings?.contact_phone ? { telephone: settings.contact_phone } : {}),
+    ...(settings?.contact_address
+      ? { address: { '@type': 'PostalAddress', streetAddress: settings.contact_address, addressCountry: 'TR' } }
+      : {}),
+    sameAs: [settings?.instagram_url, settings?.linkedin_url].filter(Boolean),
+  }
+
   return (
     <div className="max-w-[960px] mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-16">
+      <JsonLd data={businessSchema} />
       <div>
         <h1 className="text-[2rem] text-coffee-dark mb-6 leading-[1.25]">
           Merhaba,<br />

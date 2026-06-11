@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'KVKK Aydınlatma Metni | Hande Pehlivan',
+  title: 'KVKK Aydınlatma Metni',
   description: 'Kişisel Verilerin Korunması Kanunu kapsamında kişisel verilerinizin işlenmesine ilişkin aydınlatma metni.',
+  alternates: { canonical: '/kvkk' },
 }
 
 export default function KvkkPage() {

@@ -5,8 +5,9 @@ import Link from 'next/link'
 import RandevuClient from './RandevuClient'
 
 export const metadata: Metadata = {
-  title: 'Randevu | Hande Pehlivan',
+  title: 'Randevu',
   description: 'Online randevu talebi oluşturun. Uygun bir gün ve saat seçerek randevu talebinizi iletebilirsiniz.',
+  alternates: { canonical: '/randevu' },
 }
 
 async function getSettings(): Promise<Settings | null> {

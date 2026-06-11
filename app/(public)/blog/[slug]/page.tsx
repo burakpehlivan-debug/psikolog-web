@@ -3,6 +3,8 @@ import type { Post } from '@/lib/types'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import JsonLd from '@/components/JsonLd'
+import { SITE_URL, SITE_NAME, PROFILE_IMAGE } from '@/lib/site'
 
 export const revalidate = 60
 
@@ -47,12 +49,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = await getPost(slug)
   if (!post) return { title: 'Yazı Bulunamadı' }
   return {
-    title: `${post.title} | Hande Pehlivan`,
+    title: post.title,
     description: post.excerpt ?? undefined,
+    alternates: { canonical: `/blog/${slug}` },
     openGraph: {
+      type: 'article',
+      locale: 'tr_TR',
+      siteName: SITE_NAME,
       title: post.title,
       description: post.excerpt ?? undefined,
-      images: post.cover_image_url ? [post.cover_image_url] : [],
+      url: `/blog/${slug}`,
+      publishedTime: post.created_at,
+      modifiedTime: post.updated_at,
+      images: [post.cover_image_url ?? PROFILE_IMAGE],
     },
   }
 }
@@ -75,8 +84,23 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound()
   const { prev, next } = await getAdjacentPosts(post.id)
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    ...(post.excerpt ? { description: post.excerpt } : {}),
+    image: post.cover_image_url ?? PROFILE_IMAGE,
+    datePublished: post.created_at,
+    dateModified: post.updated_at,
+    ...(post.category ? { articleSection: post.category } : {}),
+    author: { '@type': 'Person', name: SITE_NAME, url: `${SITE_URL}/hakkinda` },
+    publisher: { '@type': 'Person', name: SITE_NAME },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${slug}` },
+  }
+
   return (
     <>
+      <JsonLd data={articleSchema} />
       {/* Üst header — coffee-dark bant */}
       <section className="bg-coffee-dark px-8 pt-20 pb-24 md:pt-24 md:pb-32 relative overflow-hidden">
         <div

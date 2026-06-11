@@ -1,11 +1,13 @@
 import type { MetadataRoute } from 'next'
 import { createClient } from '@/lib/supabase/server'
+import { SITE_URL } from '@/lib/site'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+  const base = SITE_URL
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${base}/`,         lastModified: new Date(), changeFrequency: 'monthly',  priority: 1 },
+    { url: `${base}/hakkinda`, lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.8 },
     { url: `${base}/blog`,     lastModified: new Date(), changeFrequency: 'weekly',   priority: 0.9 },
     { url: `${base}/randevu`,  lastModified: new Date(), changeFrequency: 'monthly',  priority: 0.8 },
     { url: `${base}/iletisim`, lastModified: new Date(), changeFrequency: 'yearly',   priority: 0.5 },
