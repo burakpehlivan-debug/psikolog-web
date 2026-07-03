@@ -7,7 +7,7 @@ export const SITE_URL = (
 export const SITE_NAME = 'Hande Pehlivan'
 export const SITE_TITLE = 'Hande Pehlivan | Klinik Psikolog'
 export const SITE_DESCRIPTION =
-  'Çocuk ve ergen psikolojisi alanında uzmanlaşmış klinik psikolog. Bilişsel Davranışçı Terapi ve Deneyimsel Oyun Terapisi.'
+  'Çocuk ve ergen psikolojisi alanında uzmanlaşmış klinik psikolog. Bilişsel Davranışçı Terapi ve Deneyimsel Oyun Terapisi — online ve Tuzla\'da yüz yüze.'
 
 // Hande'nin profil görseli (Person / OG paylaşımları için)
 export const PROFILE_IMAGE =

@@ -75,7 +75,16 @@ const infoCards = [
       </svg>
     ),
     title: 'Çalışma Biçimi',
-    desc: 'Online terapi · Yüz yüze',
+    desc: 'Online terapi · Tuzla\'da yüz yüze',
+  },
+  {
+    icon: (
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="26" height="26">
+        <circle cx="12" cy="8" r="6" /><path d="M8.5 13L7 22l5-3 5 3L15.5 13" />
+      </svg>
+    ),
+    title: 'Klinik Deneyim',
+    desc: '3.500+ birebir seans',
   },
 ]
 
@@ -136,6 +145,10 @@ export default async function HakkindaPage() {
       'Depresyon',
     ],
     memberOf: { '@type': 'Organization', name: 'Türk Psikologlar Derneği' },
+    workLocation: {
+      '@type': 'Place',
+      address: { '@type': 'PostalAddress', addressLocality: 'Tuzla', addressRegion: 'İstanbul', addressCountry: 'TR' },
+    },
     sameAs: [settings?.instagram_url, settings?.linkedin_url].filter(Boolean),
   }
 
@@ -189,7 +202,7 @@ export default async function HakkindaPage() {
               2020–2023 yılları arasında Madalyon Psikiyatri Merkezi&apos;nde çocuk ve ergenlerle çalıştı. Sınav kaygısı, yeme bozukluğu, anksiyete, depresyon ve OKB başta olmak üzere nevrotik bozukluklarda BDT ile çalıştı; 1. ve 2. Düzey Deneyimsel Oyun Terapisi eğitimlerini ve projektif test eğitimlerini tamamladı.
             </p>
             <p className="text-text-soft text-[1rem] leading-[2] font-sans">
-              2024&apos;ten bu yana bireysel online terapi pratiğini sürdürmektedir.
+              2024&apos;ten bu yana bireysel terapi pratiğini online olarak ve Tuzla&apos;daki ofisinde yüz yüze sürdürmektedir. Meslek hayatı boyunca çocuk, ergen ve genç yetişkinlerle 3.500&apos;den fazla birebir seans gerçekleştirmiştir.
             </p>
           </RevealOnScroll>
         </div>

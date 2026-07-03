@@ -7,14 +7,14 @@ import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESCRIPTION, PROFILE_IMAGE } from
 
 export const metadata: Metadata = {
   title: 'İletişim',
-  description: 'Hande Pehlivan ile iletişime geçin — randevu talebi, e-posta veya WhatsApp üzerinden ulaşabilirsiniz.',
+  description: 'Hande Pehlivan ile iletişime geçin — online veya Tuzla\'da yüz yüze seans için randevu talebi, e-posta ya da WhatsApp üzerinden ulaşabilirsiniz.',
   alternates: { canonical: '/iletisim' },
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
     siteName: SITE_NAME,
     title: 'İletişim | Hande Pehlivan',
-    description: 'Hande Pehlivan ile iletişime geçin — randevu talebi, e-posta veya WhatsApp üzerinden ulaşabilirsiniz.',
+    description: 'Hande Pehlivan ile iletişime geçin — online veya Tuzla\'da yüz yüze seans için randevu talebi, e-posta ya da WhatsApp üzerinden ulaşabilirsiniz.',
     url: '/iletisim',
     images: [PROFILE_IMAGE],
   },
@@ -40,13 +40,21 @@ export default async function IletisimPage() {
     description: SITE_DESCRIPTION,
     image: PROFILE_IMAGE,
     url: `${SITE_URL}/iletisim`,
-    areaServed: { '@type': 'Country', name: 'Türkiye' },
+    areaServed: [
+      { '@type': 'City', name: 'Tuzla' },
+      { '@type': 'City', name: 'Gebze' },
+      { '@type': 'Country', name: 'Türkiye' },
+    ],
     serviceType: 'Psikoterapi',
     ...(settings?.contact_email ? { email: settings.contact_email } : {}),
     ...(settings?.contact_phone ? { telephone: settings.contact_phone } : {}),
-    ...(settings?.contact_address
-      ? { address: { '@type': 'PostalAddress', streetAddress: settings.contact_address, addressCountry: 'TR' } }
-      : {}),
+    address: {
+      '@type': 'PostalAddress',
+      ...(settings?.contact_address ? { streetAddress: settings.contact_address } : {}),
+      addressLocality: 'Tuzla',
+      addressRegion: 'İstanbul',
+      addressCountry: 'TR',
+    },
     sameAs: [settings?.instagram_url, settings?.linkedin_url].filter(Boolean),
   }
 
@@ -59,7 +67,7 @@ export default async function IletisimPage() {
           <em className="italic text-coffee">nasıl yardımcı olabilirim?</em>
         </h1>
         <p className="text-[0.95rem] text-text-soft leading-[1.95] mb-8">
-          Terapi süreci veya randevu talebi hakkında merak ettiğiniz konular varsa formu doldurabilir, doğrudan mail atabilir ya da WhatsApp üzerinden ulaşabilirsiniz.
+          Terapi süreci veya randevu talebi hakkında merak ettiğiniz konular varsa formu doldurabilir, doğrudan mail atabilir ya da WhatsApp üzerinden ulaşabilirsiniz. Seanslar online olarak ya da Tuzla&apos;daki ofisimde yüz yüze yürütülüyor; Gebze ve çevresinden ulaşım oldukça kolay.
         </p>
 
         <div className="flex flex-col gap-5">
