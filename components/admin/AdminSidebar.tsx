@@ -11,6 +11,7 @@ export default function AdminSidebar({ email }: { email: string }) {
     { href: '/admin/blog', label: 'Blog Yazıları', exact: false },
     { href: '/admin/randevu', label: 'Randevular', exact: false },
     { href: '/admin/ayarlar', label: 'Ayarlar', exact: false },
+    { href: '/admin/hesap', label: 'Hesap', exact: false },
   ]
 
   return (
