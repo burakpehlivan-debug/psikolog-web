@@ -3,6 +3,7 @@ import type { Settings } from '@/lib/types'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import RandevuClient from './RandevuClient'
+import DoktortakvimiWidget from '@/components/public/DoktortakvimiWidget'
 
 export const metadata: Metadata = {
   title: 'Randevu',
@@ -62,14 +63,54 @@ export default async function RandevuPage() {
         </div>
       </section>
 
+      {/* Doktortakvimi — birincil online randevu */}
+      <section className="bg-white px-8 py-16 md:py-24">
+        <div className="max-w-[860px] mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-[0.75rem] tracking-[0.2em] uppercase text-coffee mb-2 font-sans">Online Randevu</p>
+            <h2 className="font-serif text-[1.8rem] text-coffee-dark mb-3">Doktortakvimi üzerinden anında randevu</h2>
+            <p className="text-[0.92rem] text-text-soft leading-[1.9] max-w-[520px] mx-auto">
+              Güncel boş saatleri aşağıdan görebilir, yüz yüze veya online seansınızı hemen ayırtabilirsiniz.
+            </p>
+          </div>
+          <div className="bg-cream border border-beige px-4 py-8 md:px-10">
+            <DoktortakvimiWidget
+              type="big_with_calendar"
+              opinion={false}
+              className="max-w-[560px] mx-auto min-h-[420px]"
+            />
+          </div>
+          <p className="text-center text-[0.82rem] text-text-soft/80 mt-5">
+            Takvim görünmüyorsa{' '}
+            <a
+              href="https://www.doktortakvimi.com/profil/hande-pehlivan2"
+              target="_blank"
+              rel="nofollow noopener"
+              className="text-coffee underline underline-offset-2 hover:text-coffee-dark"
+            >
+              Doktortakvimi profilinden
+            </a>{' '}
+            randevu alabilirsiniz.
+          </p>
+        </div>
+      </section>
+
+      {settings?.appointment_system_enabled && (
+        <div className="max-w-[860px] mx-auto px-8 pt-16 md:pt-20 text-center">
+          <div className="w-12 h-px bg-coffee-light mx-auto mb-6" />
+          <p className="text-[0.75rem] tracking-[0.2em] uppercase text-coffee mb-2 font-sans">Alternatif</p>
+          <h2 className="font-serif text-[1.5rem] text-coffee-dark mb-2">Randevu talep formu</h2>
+          <p className="text-[0.9rem] text-text-soft leading-[1.9] max-w-[480px] mx-auto">
+            Dilerseniz aşağıdaki takvimden talep bırakabilirsiniz; size telefonla dönüş yapılır.
+          </p>
+        </div>
+      )}
+
       {!settings?.appointment_system_enabled ? (
-        <section className="max-w-[600px] mx-auto px-8 py-28 text-center">
+        <section className="max-w-[600px] mx-auto px-8 py-20 text-center">
           <div className="w-12 h-px bg-coffee-light mx-auto mb-8" />
-          <h2 className="font-serif text-[1.4rem] text-coffee-dark mb-4">
-            Randevu sistemi şu an kapalı
-          </h2>
           <p className="text-[0.88rem] text-text-soft leading-[1.95] mb-8">
-            Randevu almak için lütfen iletişim sayfasından ulaşın veya doğrudan arayın.
+            Sorularınız için iletişim sayfasından da ulaşabilirsiniz.
           </p>
           <Link
             href="/iletisim"
