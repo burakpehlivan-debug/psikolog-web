@@ -3,7 +3,6 @@ import AboutSection from '@/components/public/AboutSection'
 import ExpertiseSection from '@/components/public/ExpertiseSection'
 import BlogPreviewSection from '@/components/public/BlogPreviewSection'
 import CtaBand from '@/components/public/CtaBand'
-import ReviewsSection from '@/components/public/ReviewsSection'
 import { createClient } from '@/lib/supabase/server'
 import type { Post, Settings } from '@/lib/types'
 import type { Metadata } from 'next'
@@ -83,7 +82,6 @@ export default async function HomePage() {
       <JsonLd data={serviceSchema} />
       <HeroSection />
       <AboutSection />
-      <ReviewsSection />
       <ExpertiseSection />
       <BlogPreviewSection posts={posts} />
       <CtaBand />

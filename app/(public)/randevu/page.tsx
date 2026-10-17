@@ -64,7 +64,7 @@ export default async function RandevuPage() {
       </section>
 
       {/* Doktortakvimi — birincil online randevu */}
-      <section className="bg-white px-8 py-16 md:py-24">
+      <section className="bg-white px-4 md:px-8 py-16 md:py-24">
         <div className="max-w-[860px] mx-auto">
           <div className="text-center mb-10">
             <p className="text-[0.75rem] tracking-[0.2em] uppercase text-coffee mb-2 font-sans">Online Randevu</p>
@@ -73,10 +73,11 @@ export default async function RandevuPage() {
               Güncel boş saatleri aşağıdan görebilir, yüz yüze veya online seansınızı hemen ayırtabilirsiniz.
             </p>
           </div>
-          <div className="bg-cream border border-beige px-4 py-8 md:px-10">
+          <div className="bg-cream border border-beige py-6 md:px-10 md:py-8">
             <DoktortakvimiWidget
               type="big_with_calendar"
               opinion={false}
+              hideRating
               className="max-w-[560px] mx-auto min-h-[420px]"
             />
           </div>
